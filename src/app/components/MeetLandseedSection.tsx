@@ -31,8 +31,8 @@ export default function MeetLandseedSection() {
               community-first development consultants connecting property
               owners, builders, lenders, and city officials. We guide homeowners
               through planning and construction to build backyard suites that
-              serve their goals—whether it's creating rental income, welcoming
-              guests, or housing loved ones.
+              serve their goals—whether it&apos;s creating rental income,
+              welcoming guests, or housing loved ones.
             </p>
 
             <h2 className="font-heading text-[32px] text-primary mb-6 font-[400]">

@@ -1,7 +1,9 @@
 import Hero from "./components/Hero";
 import BenefitsSection from "./components/BenefitsSection";
 import MeetLandseedSection from "./components/MeetLandseedSection";
-// import FAQSection from "./components/FAQSection";
+import UnlockPotentialSection from "./components/UnlockPotentialSection";
+import Testimonials from "./components/Testimonials";
+import PathSteps from "./components/PathSteps";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       <Hero />
       <BenefitsSection />
       <MeetLandseedSection />
-      {/* <FAQSection /> */}
+      <UnlockPotentialSection />
+      <Testimonials />
+      <PathSteps />
     </div>
   );
 }
