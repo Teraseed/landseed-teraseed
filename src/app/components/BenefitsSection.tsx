@@ -15,7 +15,7 @@ const iconPaths = {
 export default function BenefitsSection() {
   return (
     <section className="w-full  bg-opacity-20 py-16">
-      <div className="max-w-7xl mx-[104px] px-4">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Why Backyard Suites Matter Section */}
         <div className="mb-16">
           <div className="text-center mb-10">

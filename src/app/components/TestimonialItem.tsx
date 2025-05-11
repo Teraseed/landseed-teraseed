@@ -26,10 +26,8 @@ const TestimonialItem: React.FC<TestimonialProps> = ({
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="relative ml-4 md:ml-6 flex-grow max-w-xl rounded-lg overflow-hidden">
-        {/* 背景层 */}
         <div className="absolute inset-0 bg-orange-gradient opacity-64 z-0 pointer-events-none"></div>
 
-        {/* 内容层 */}
         <div className="relative z-10 p-4 md:p-6">
           <p className="text-neutral-darkest font-heading text-[18px] mb-3">
             &quot;{quote}&quot;

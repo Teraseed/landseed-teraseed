@@ -103,35 +103,6 @@ const PathSteps: React.FC = () => {
               {steps[3].description}
             </p>
           </div>
-
-          {/* Flag markers */}
-          <div className="absolute left-[15%] top-[45%]">
-            <div className="bg-red-700 w-10 h-6 flex items-center justify-center text-white font-medium">
-              1
-            </div>
-            <div className="w-0.5 h-14 bg-black mx-auto"></div>
-          </div>
-
-          <div className="absolute left-[40%] top-[65%]">
-            <div className="bg-red-700 w-10 h-6 flex items-center justify-center text-white font-medium">
-              2
-            </div>
-            <div className="w-0.5 h-14 bg-black mx-auto"></div>
-          </div>
-
-          <div className="absolute left-[60%] top-[25%]">
-            <div className="bg-red-700 w-10 h-6 flex items-center justify-center text-white font-medium">
-              3
-            </div>
-            <div className="w-0.5 h-14 bg-black mx-auto"></div>
-          </div>
-
-          <div className="absolute left-[85%] top-[45%]">
-            <div className="bg-red-700 w-10 h-6 flex items-center justify-center text-white font-medium">
-              4
-            </div>
-            <div className="w-0.5 h-14 bg-black mx-auto"></div>
-          </div>
         </div>
       </div>
     </div>

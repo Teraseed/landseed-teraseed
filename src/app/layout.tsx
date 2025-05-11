@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${suezOne.variable} ${nunitoSans.variable}`}>
+      <body className={`${suezOne.variable} ${nunitoSans.variable} bg-page`}>
         {/* <Header /> */}
         <main>{children}</main>
         <Footer />

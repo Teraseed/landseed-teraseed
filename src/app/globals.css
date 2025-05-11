@@ -73,3 +73,10 @@ h6 {
     ),
     rgba(240, 220, 197, 0.5);
 }
+
+.bg-page {
+  background-image: url("/images/background-blur-color.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
