@@ -25,14 +25,15 @@ const MoreInformation: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-[#fdf8f2] py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full py-20">
+      <div className="mx-auto">
         {/* Heading section */}
-        <div className="mb-20">
-          <h3 className="font-heading text-xl md:text-2xl text-amber-500 mb-3">
+        <div className="absolute mb-1 w-[709px] h-[162px] bg-orange-moreinfo opacity-60 z-0"></div>
+        <div className="relative mb-10 w-[709px] h-[162px] z-10">
+          <h3 className="font-heading text-xl md:text-2xl text-secondary-light mb-3 pl-10 pt-10">
             LEARN MORE ABOUT YOUR BACKYARD SUITE!
           </h3>
-          <h2 className="font-heading text-4xl md:text-5xl text-[#566e5a]">
+          <h2 className="font-heading text-4xl md:text-5xl text-primary pl-10">
             MORE INFORMATION
           </h2>
         </div>

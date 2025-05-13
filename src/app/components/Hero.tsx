@@ -3,37 +3,33 @@ import Link from "next/link";
 import Header from "./Header";
 export default function Hero() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        {/* Left Decorative Rectangle with Blur */}
-        <div className="absolute left-[253px] top-[212px] w-[15.9375rem] h-[16.0625rem] rounded-full bg-[#F3B562] blur-[300px] opacity-60 z-0"></div>
-        <div className="absolute left-[13.8rem] top-[13rem] w-[143px] h-[143px] z-10">
-          <img
-            src="/images/ellipse-left.svg"
-            className="w-full h-full"
-            alt="Decorative gradient circle"
-          />
-        </div>
-        {/* Right Decorative Orange Rectangle with Blur */}
-        <div className="absolute right-1/4 top-40 z-[1] w-[15.9375rem] h-[16.0625rem] bg-[#D16035] blur-[300px]"></div>
+    <div className="relative w-full h-[1353px] overflow-hidden">
+      {/* Background Layers - bottom to top */}
+      {/* Hero Background Image (bottom layer) */}
+      <div className="absolute inset-0 z-[1] scale-x-[-1]">
+        <Image
+          src="/images/hero-background.png"
+          alt="Backyard with tiny home"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
-        {/* Background Image */}
-        <div className="absolute inset-0 z-[1] scale-x-[-1]">
-          <Image
-            src="/images/hero-background.png"
-            alt="Backyard with tiny home"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+      {/* Decorative ellipse positioned in the hero section */}
+      <div className="absolute w-[1050px] left-[880px] top-[320px] transform -translate-x-1/2 -translate-y-1/4 z-[2]">
+        <img
+          src="/images/ellipse.svg"
+          alt="Decorative background shape"
+          className="absolute w-[85%] h-auto max-w-[1100px]"
+        />
       </div>
 
       <Header />
 
-      {/* Hero Content */}
-      <div className="relative z-20 px-4 pt-[6rem] pb-[8rem] max-w-[1200px] mx-auto">
-        <div className="max-w-[1200px]">
+      {/* Hero Content (top layer) */}
+      <div className="relative z-20 px-4 pt-[16rem] pb-[8rem] max-w-[1000px] mx-auto">
+        <div className="max-w-[1000px]">
           <h1 className="font-heading text-gray-100 mb-4 text-[48px] leading-[1.16] font-[400]">
             Unlock Your Backyard Potential
           </h1>

@@ -44,7 +44,7 @@ const ImageCarousel: React.FC = () => {
   const isAtEnd = currentIndex >= images.length - 2;
 
   return (
-    <div className="w-full bg-slate-50 py-8">
+    <div className="w-fullpy-8">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8">
           <h3 className="font-sans text-xl text-amber-400 uppercase tracking-wide">

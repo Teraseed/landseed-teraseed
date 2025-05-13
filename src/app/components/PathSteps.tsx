@@ -31,7 +31,7 @@ const PathSteps: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-16 px-4 bg-gray-50">
+    <div className="w-full py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h3 className="text-center font-heading text-xl text-amber-600 font-medium mb-6">
           THESE ARE JUST THREE STORIES—YOURS MIGHT BE NEXT.
