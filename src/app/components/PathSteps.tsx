@@ -66,7 +66,7 @@ const PathSteps: React.FC = () => {
           </div>
 
           {/* Step 2 - Bottom Center */}
-          <div className="absolute left-[35%] bottom-[5%] transform -translate-x-1/2 max-w-[160px] md:max-w-[200px]">
+          <div className="absolute left-[42%] bottom-[5%] transform -translate-x-1/2 max-w-[160px] md:max-w-[200px]">
             <h3 className="font-heading text-4xl text-[#566e5a] font-medium">
               {steps[1].number}
             </h3>
@@ -92,7 +92,7 @@ const PathSteps: React.FC = () => {
           </div>
 
           {/* Step 4 - Right */}
-          <div className="absolute right-0 top-[35%] md:top-[40%] max-w-[160px] md:max-w-[200px]">
+          <div className="absolute right-[-5%] top-[35%] md:top-[45%] max-w-[160px] md:max-w-[200px]">
             <h3 className="font-heading text-4xl text-[#566e5a] font-medium">
               {steps[3].number}
             </h3>

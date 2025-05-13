@@ -33,7 +33,7 @@ const MoreInformation: React.FC = () => {
           <h3 className="font-heading text-xl md:text-2xl text-secondary-light mb-3 pl-10 pt-10">
             LEARN MORE ABOUT YOUR BACKYARD SUITE!
           </h3>
-          <h2 className="font-heading text-4xl md:text-5xl text-primary pl-10">
+          <h2 className="font-heading text-[41px] text-primary pl-10">
             MORE INFORMATION
           </h2>
         </div>

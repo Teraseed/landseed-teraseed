@@ -3,30 +3,40 @@ import Image from "next/image";
 
 export default function MeetLandseedSection() {
   return (
-    <section className="py-16 ml-[104px] mr-[104px]">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center overflow-hidden">
+    <section className="py-16 px-4 mobile:px-8 tablet:px-16 desktop:mx-[104px]">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col tablet:flex-row items-center overflow-hidden gap-8 tablet:gap-20">
           {/* Left side - Image */}
-          <div className="w-[475px] md:w-1/2 relative h-[443px]">
+          <div className="w-full mobile:w-[400px] tablet:w-[475px] relative h-[300px] mobile:h-[350px] tablet:h-[443px]">
             <Image
               src="/images/meet-landseed.jpg"
               alt="LandSeed Team Meeting"
               fill
               className="object-cover"
             />
+            <div className="absolute right-[-30px] mobile:right-[-40px] tablet:right-[-60px] bottom-[-20px] mobile:bottom-[-30px] tablet:bottom-[-40px] z-[-1] w-[300px] mobile:w-[350px] tablet:w-auto">
+              <Image
+                src="/images/rectangle-meet.svg"
+                width={461}
+                height={456}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           {/* Right side - Content */}
-          <div className="w-full md:w-1/2 p-8 md:p-12">
-            <p className="text-secondary-light font-heading text-[18px] mb-2">
+          <div className="w-full tablet:w-2/3 p-4 mobile:p-6 tablet:p-8 desktop:p-12">
+            <p className="text-secondary-light font-heading text-[16px] mobile:text-[18px] mb-2">
               MEET LANDSEED: YOUR GUIDE IN THE PROCESS
             </p>
 
-            <h2 className="font-heading text-[32px] text-primary mb-6 font-[400]">
+            <h2 className="font-heading text-[26px] mobile:text-[28px] tablet:text-[32px] text-primary mb-4 tablet:mb-6 font-[400]">
               WHAT IS LANDSEED?
             </h2>
 
-            <p className="font-body text-gray-200 mb-8 text-[16px] leading-relaxed">
+            <p className="font-body text-gray-200 mb-6 tablet:mb-8 text-[14px] mobile:text-[16px] font-[300] leading-relaxed">
               LandSeed is a non-profit organization. We are a team of
               community-first development consultants connecting property
               owners, builders, lenders, and city officials. We guide homeowners
@@ -35,11 +45,11 @@ export default function MeetLandseedSection() {
               welcoming guests, or housing loved ones.
             </p>
 
-            <h2 className="font-heading text-[32px] text-primary mb-6 font-[400]">
+            <h2 className="font-heading text-[26px] mobile:text-[28px] tablet:text-[32px] text-primary mb-4 tablet:mb-6 font-[400]">
               WHAT MAKES US DIFFERENT?
             </h2>
 
-            <p className="font-body text-gray-200 text-[16px] leading-relaxed">
+            <p className="font-body text-gray-200 text-[14px] mobile:text-[16px] font-[300] leading-relaxed">
               LandSeed is a community-first consulting team with hands-on zoning
               and legal expertise. We are diverse and have experience working
               across cultures and preferences. Our mindset is collaborative,

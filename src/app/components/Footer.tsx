@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-secondary-100 text-gray-200">
-      <div className="max-w-[1440px] h-[239px] mx-auto px-8 py-10 flex items-center pb-17">
+    <footer className="w-full bg-secondary-100 text-gray-200 overflow-hidden">
+      <div className="max-w-full mobile:max-w-[95%] tablet:max-w-[90%] desktop:max-w-[1440px] mx-auto px-4 mobile:px-6 tablet:px-8 py-10 flex flex-col mobile:flex-row items-center justify-between">
         {/* Logo and Copyright Info */}
-        <div className="flex-1">
-          <div className="relative h-32 w-64 mr-3">
+        <div className="mb-8 mobile:mb-0">
+          <div className="relative h-24 w-48 mobile:h-28 mobile:w-56 tablet:h-32 tablet:w-64 mx-auto mobile:mx-0">
             <Image
               src="/images/landseed-logo.svg"
               alt="LandSeed Logo"
@@ -14,16 +14,16 @@ export default function Footer() {
               className="object-contain"
             />
           </div>
-          <div className="ml-13">
-            <p className="font-body text-1 font-[300]">
+          <div className="text-center mobile:text-left mt-4">
+            <p className="font-body text-sm font-[300]">
               Copyright © {new Date().getFullYear()} LandSeed
             </p>
-            <p className="font-body text-1 font-[300]">All rights reserved</p>
+            <p className="font-body text-sm font-[300]">All rights reserved</p>
           </div>
         </div>
 
         {/* Contact Information */}
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center mobile:items-end">
           <h3 className="font-heading text-xl mb-4 text-primary">Contact us</h3>
           <p className="font-body text-sm mb-2">
             <a href="https://www.landseed.ca" className="hover:underline">

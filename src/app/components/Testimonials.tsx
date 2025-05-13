@@ -29,25 +29,43 @@ const TestimonialsComponent = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-12 px-4">
-      <h2 className="text-center font-heading text-4xl text-primary font-medium mb-12">
-        REAL LIVES, REAL IMPACT
-      </h2>
+    <section className="w-full py-12 mobile:py-16 tablet:py-20">
+      <div className="max-w-5xl mx-auto px-4 mobile:px-6 tablet:px-8">
+        <h2 className="text-center font-heading text-3xl mobile:text-4xl text-primary font-medium mb-8 mobile:mb-10 tablet:mb-12">
+          REAL LIVES, REAL IMPACT
+        </h2>
 
-      <div className="space-y-10">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialItem
-            key={index}
-            name={testimonial.name}
-            age={testimonial.age}
-            image={testimonial.image}
-            quote={testimonial.quote}
-            description={testimonial.description}
-            offset={index * 10}
-          />
-        ))}
+        {/* Mobile and Tablet View */}
+        <div className="desktop:hidden space-y-10 flex flex-col items-center">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialItem
+              key={`mobile-${index}`}
+              name={testimonial.name}
+              age={testimonial.age}
+              image={testimonial.image}
+              quote={testimonial.quote}
+              description={testimonial.description}
+              offset={0}
+            />
+          ))}
+        </div>
+
+        {/* Desktop View with staggered effect */}
+        <div className="hidden desktop:flex desktop:flex-col space-y-10">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialItem
+              key={`desktop-${index}`}
+              name={testimonial.name}
+              age={testimonial.age}
+              image={testimonial.image}
+              quote={testimonial.quote}
+              description={testimonial.description}
+              offset={index * 10}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  /* Custom breakpoints for Figma designs */
+  --breakpoint-mobile: 25.125rem; /* 402px */
+  --breakpoint-tablet: 52.125rem; /* 834px */
+  --breakpoint-desktop: 90rem; /* 1440px */
+
   /* Primary Colors - Green tones */
   --color-primary: #647b64; /* neutral-500 */
   --color-primary-light: #66ac66; /* neutral-500-75 */
@@ -42,8 +47,11 @@
 }
 
 /* Font Settings */
+html,
 body {
   font-family: var(--font-nunito-sans), system-ui, sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 h1,

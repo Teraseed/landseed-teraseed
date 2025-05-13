@@ -5,6 +5,7 @@ import UnlockPotentialSection from "./components/UnlockPotentialSection";
 import Testimonials from "./components/Testimonials";
 import PathSteps from "./components/PathSteps";
 import ImageCarousel from "./components/ImageCarousel";
+import ContactForm from "./components/ContactForm";
 import MoreInformation from "./components/MoreInformation";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Testimonials />
       <PathSteps />
       <ImageCarousel />
+      <ContactForm />
       <MoreInformation />
     </div>
   );

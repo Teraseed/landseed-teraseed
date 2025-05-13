@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans, Suez_One } from "next/font/google";
-// import Header from "@/components/Header";
 import Footer from "./components/Footer";
 
 // Suez One font (for headings)
@@ -22,6 +21,7 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   title: "Tiny Home",
   description: "Tiny Home by LandSeed",
+  viewport: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
 };
 
 export default function RootLayout({
@@ -31,8 +31,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${suezOne.variable} ${nunitoSans.variable} bg-page`}>
-        {/* <Header /> */}
+      <head></head>
+      <body
+        className={`${suezOne.variable} ${nunitoSans.variable} bg-page min-h-screen w-full`}
+      >
         <main>{children}</main>
         <Footer />
       </body>
