@@ -31,12 +31,12 @@ const TestimonialsComponent = () => {
   return (
     <section className="w-full py-12 mobile:py-16 tablet:py-20">
       <div className="max-w-5xl mx-auto px-4 mobile:px-6 tablet:px-8">
-        <h2 className="text-center font-heading text-3xl mobile:text-4xl text-primary font-medium mb-8 mobile:mb-10 tablet:mb-12">
+        <h2 className="text-center font-heading text-[20px] desktop:text-[40px] text-primary font-medium mb-8 mobile:mb-10 tablet:mb-12">
           REAL LIVES, REAL IMPACT
         </h2>
 
         {/* Mobile and Tablet View */}
-        <div className="desktop:hidden space-y-10 flex flex-col items-center">
+        <div className="desktop:hidden space-y-10 flex flex-col items-center w-full max-w-2xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <TestimonialItem
               key={`mobile-${index}`}
@@ -51,7 +51,7 @@ const TestimonialsComponent = () => {
         </div>
 
         {/* Desktop View with staggered effect */}
-        <div className="hidden desktop:flex desktop:flex-col space-y-10">
+        <div className="hidden desktop:flex desktop:flex-col space-y-10 max-w-3xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <TestimonialItem
               key={`desktop-${index}`}
@@ -60,7 +60,7 @@ const TestimonialsComponent = () => {
               image={testimonial.image}
               quote={testimonial.quote}
               description={testimonial.description}
-              offset={index * 10}
+              offset={index === 0 ? -8 : index === 2 ? 8 : 0}
             />
           ))}
         </div>

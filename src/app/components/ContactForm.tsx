@@ -22,10 +22,10 @@ const ContactForm: React.FC = () => {
     <div className="w-full py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8 text-center">
-          <h3 className="font-sans text-xl text-amber-400 uppercase tracking-wide">
+          <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
             BOOK YOUR FREE PROPERTY ASSESSMENT
           </h3>
-          <h2 className="font-sans text-4xl text-[#566e5a] font-medium">
+          <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
             LET&apos;S BRING YOUR BACKYARD SUITE TO LIFE STARTING TODAY!
           </h2>
         </div>

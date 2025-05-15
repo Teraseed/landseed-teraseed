@@ -28,7 +28,7 @@ export default function UnlockPotentialSection() {
           <p className="text-secondary-light font-heading text-[18px] mobile:text-[20px] tablet:text-[24px] mb-2 mobile:mb-3 tablet:mb-4">
             WE DON&apos;T JUST BUILD.
           </p>
-          <h2 className="font-heading text-[32px] mobile:text-[40px] tablet:text-[48px] text-primary mb-4 mobile:mb-6 tablet:mb-8 font-[400]">
+          <h2 className="font-heading text-[20px] tablet:text-[41px] text-primary mb-4 mobile:mb-6 tablet:mb-8 font-[400]">
             WE UNLOCK POTENTIAL.
           </h2>
           <p className="font-body text-gray-200 text-[14px] mobile:text-[16px] tablet:text-[18px] leading-relaxed max-w-3xl mx-auto">

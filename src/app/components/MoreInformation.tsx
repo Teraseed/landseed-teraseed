@@ -30,10 +30,10 @@ const MoreInformation: React.FC = () => {
         {/* Heading section */}
         <div className="absolute mb-1 w-[709px] h-[162px] bg-orange-moreinfo opacity-60 z-0"></div>
         <div className="relative mb-10 w-[709px] h-[162px] z-10">
-          <h3 className="font-heading text-xl md:text-2xl text-secondary-light mb-3 pl-10 pt-10">
+          <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light mb-3 pl-10 pt-10">
             LEARN MORE ABOUT YOUR BACKYARD SUITE!
           </h3>
-          <h2 className="font-heading text-[41px] text-primary pl-10">
+          <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-primary pl-10">
             MORE INFORMATION
           </h2>
         </div>

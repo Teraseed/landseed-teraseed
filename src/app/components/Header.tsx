@@ -54,7 +54,7 @@ export default function Header() {
           <ul className="flex space-x-6 desktop:space-x-8">
             <li>
               <Link
-                href="/"
+                href="https://landseed.ca/"
                 className="font-heading text-neutral-darkest text-base desktop:text-lg font-medium hover:text-primary transition-colors"
               >
                 Home
@@ -62,7 +62,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="https://www.landseed.ca/about"
                 className="font-heading text-neutral-darkest text-base desktop:text-lg font-medium hover:text-primary transition-colors"
               >
                 About Us

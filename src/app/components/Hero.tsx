@@ -17,7 +17,29 @@ export default function Hero() {
       </div>
 
       {/* Decorative ellipse positioned in the hero section */}
-      <div className="absolute w-[350px] mobile:w-[400px] tablet:w-[600px] desktop:w-[1050px] right-[-100px] tablet:right-[-150px] desktop:right-[-200px] top-[200px] tablet:top-[250px] desktop:top-[320px] z-[2]">
+      <div
+        className="
+    absolute 
+    w-[350px] 
+    mobile:w-[400px] 
+    tablet:w-[600px] 
+    desktop:w-[1050px] 
+    right-[10%] 
+    mobile:right-[18%] 
+    tablet:right-[30%] 
+    desktop:right-[150px] 
+    top-[200px] 
+    mobile:top-[200px] 
+    tablet:top-[250px] 
+    desktop:top-[290px] 
+    z-[2]
+    transform 
+    translate-x-[15%] 
+    mobile:translate-x-[10%] 
+    tablet:translate-x-[0%] 
+    desktop:translate-x-0
+  "
+      >
         <img
           src="/images/ellipse.svg"
           alt="Decorative background shape"

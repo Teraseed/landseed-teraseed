@@ -32,7 +32,7 @@ export default function MeetLandseedSection() {
               MEET LANDSEED: YOUR GUIDE IN THE PROCESS
             </p>
 
-            <h2 className="font-heading text-[26px] mobile:text-[28px] tablet:text-[32px] text-primary mb-4 tablet:mb-6 font-[400]">
+            <h2 className="font-heading text-[20px] desktop:text-[40px] text-primary mb-4 tablet:mb-6 font-[400]">
               WHAT IS LANDSEED?
             </h2>
 
@@ -45,7 +45,7 @@ export default function MeetLandseedSection() {
               welcoming guests, or housing loved ones.
             </p>
 
-            <h2 className="font-heading text-[26px] mobile:text-[28px] tablet:text-[32px] text-primary mb-4 tablet:mb-6 font-[400]">
+            <h2 className="font-heading text-[20px] desktop:text-[40px] text-primary mb-4 tablet:mb-6 font-[400]">
               WHAT MAKES US DIFFERENT?
             </h2>
 
