@@ -61,7 +61,7 @@ export default function Hero() {
           {/* CTA Button */}
           <div className="max-w-full tablet:max-w-[300px] desktop:max-w-[350px]">
             <Link
-              href="/assessment"
+              href="#contact-form"
               className="inline-flex items-center px-4 tablet:px-5 desktop:px-6 py-2 tablet:py-3 text-white-text transition-all group 
                bg-[linear-gradient(102deg,#647B64_-4.62%,#66AC66_178.22%)] 
                shadow-[0px_20px_40px_rgba(128,143,150,0.19)] 

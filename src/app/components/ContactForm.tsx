@@ -19,7 +19,7 @@ const ContactForm: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full py-12">
+    <div id="contact-form" className="w-full py-12">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8 text-center">
           <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
