@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const ImageCarousel: React.FC = () => {
   const images = [
@@ -31,6 +32,9 @@ const ImageCarousel: React.FC = () => {
 
   // Update the number of visible images based on screen size
   useEffect(() => {
+    // Implement debouncing for the resize event handler
+    let resizeTimer: NodeJS.Timeout;
+
     const updateVisibleImages = () => {
       if (window.matchMedia("(min-width: 90rem)").matches) {
         // Desktop: 1440px
@@ -44,11 +48,19 @@ const ImageCarousel: React.FC = () => {
     // Set initial value
     updateVisibleImages();
 
-    // Add event listener for resize
-    window.addEventListener("resize", updateVisibleImages);
+    // Add event listener for resize with debouncing
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(updateVisibleImages, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
 
     // Cleanup
-    return () => window.removeEventListener("resize", updateVisibleImages);
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const goToPrevious = () => {
@@ -97,20 +109,20 @@ const ImageCarousel: React.FC = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0"
+                  className="flex-shrink-0 relative"
                   style={{
                     width: `${imageWidth}px`,
                     height: `${imageHeight}px`,
                   }}
                 >
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
-                    style={{
-                      width: `${imageWidth}px`,
-                      height: `${imageHeight}px`,
-                    }}
+                    fill
+                    sizes="(min-width: 90rem) 540px, 100vw"
+                    quality={80}
+                    priority={index === 0}
+                    className="object-cover"
                   />
                 </div>
               ))}
@@ -126,9 +138,11 @@ const ImageCarousel: React.FC = () => {
             aria-label="Previous image"
             disabled={isAtStart}
           >
-            <img
+            <Image
               src="/icons/arrow-left.svg"
               alt="Previous"
+              width={19}
+              height={19}
               className="w-19 h-19"
             />
           </button>
@@ -142,9 +156,11 @@ const ImageCarousel: React.FC = () => {
             aria-label="Next image"
             disabled={isAtEnd}
           >
-            <img
+            <Image
               src="/icons/arrow-right.svg"
               alt="Next"
+              width={19}
+              height={19}
               className="w-19 h-19"
             />
           </button>

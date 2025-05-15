@@ -1,25 +1,17 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import Script from "next/script";
 
 const ContactForm: React.FC = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  useEffect(() => {
-    // Load the script when the component mounts
-    const script = document.createElement("script");
-    script.src = "https://link.receptyv.ca/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up when the component unmounts
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <div id="contact-form" className="w-full py-12">
+      <Script
+        src="https://link.receptyv.ca/js/form_embed.js"
+        strategy="lazyOnload"
+      />
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8 text-center">
           <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">

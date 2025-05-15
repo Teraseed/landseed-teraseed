@@ -2,10 +2,38 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Handle clicks outside of the mobile menu
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Add escape key listener
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="relative z-20 px-4 py-4 mobile:py-5 tablet:py-6 flex justify-between items-center w-full mx-auto">
@@ -18,6 +46,7 @@ export default function Header() {
                 src="/images/landseed-logo.svg"
                 alt="LandSeed Logo"
                 fill
+                priority
                 className="object-contain"
               />
             </div>
@@ -28,13 +57,19 @@ export default function Header() {
         <button
           className="tablet:hidden focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
+          <span className="sr-only">
+            {mobileMenuOpen ? "Close menu" : "Open menu"}
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             className="h-6 w-6"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -74,7 +109,11 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white z-30 py-4 px-6 shadow-lg tablet:hidden">
+        <div
+          id="mobile-menu"
+          ref={menuRef}
+          className="absolute top-full left-0 right-0 bg-white z-30 py-4 px-6 shadow-lg tablet:hidden"
+        >
           <ul className="space-y-4">
             <li>
               <Link
