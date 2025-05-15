@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full bg-secondary-100 text-gray-200 overflow-hidden">
       <div className="max-w-full mobile:max-w-[95%] tablet:max-w-[90%] desktop:max-w-[1440px] mx-auto px-4 mobile:px-6 tablet:px-8 py-10 flex flex-col tablet:flex-row items-center justify-between">
         {/* Logo and Copyright Info */}
-        <div className="mb-12 mobile:mb-12 tablet:mb-0">
+        <div className="mr-10 mb-12 mobile:mb-12 tablet:mb-0">
           <div className="relative h-24 w-48 mobile:h-28 mobile:w-56 tablet:h-32 tablet:w-64 mx-auto mobile:mx-0">
             <Image
               src="/images/landseed-logo.svg"
