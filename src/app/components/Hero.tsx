@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Hero Background Image (bottom layer) */}
       <div className="absolute inset-0 z-[1] scale-x-[-1]">
         <Image
-          src="/images/hero-background.png"
+          src="/images/hero-background.webp"
           alt="Backyard with tiny home"
           fill
           priority
