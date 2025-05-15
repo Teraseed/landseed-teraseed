@@ -46,7 +46,7 @@ const MoreInformation: React.FC = () => {
                 href={booklet.href}
                 className="block hover:opacity-95 transition-opacity focus:outline-none"
               >
-                <div className="w-64 md:w-72 h-80 md:h-96 mb-4">
+                <div className="w-64 md:w-78 h-80 md:h-96 mb-4">
                   <img
                     src={booklet.imageSrc}
                     alt={booklet.alt}
