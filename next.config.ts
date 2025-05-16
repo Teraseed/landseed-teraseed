@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+// 只保留必要的安全头，并确保它们不会阻止iframe嵌入
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -23,7 +24,8 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;`,
+    value:
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;",
   },
 ];
 
