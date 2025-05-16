@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MeetLandseedSection() {
   return (
-    <section className="py-16 px-4 mobile:px-8 tablet:px-16 desktop:mx-[104px]">
+    <section className="py-16 px-4 mobile:px-8 tablet:px-16 w-full mx-auto">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col tablet:flex-row items-center overflow-hidden gap-8 tablet:gap-20">
           {/* Left side - Image */}

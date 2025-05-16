@@ -41,7 +41,7 @@ const MoreInformation = dynamic(() => import("./components/MoreInformation"), {
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <Hero />
       <BenefitsSection />
       <MeetLandseedSection />

@@ -28,6 +28,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  minimumScale: 1,
 };
 
 export default function RootLayout({
@@ -39,9 +40,9 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body
-        className={`${suezOne.variable} ${nunitoSans.variable} bg-page min-h-screen w-full`}
+        className={`${suezOne.variable} ${nunitoSans.variable} bg-page min-h-screen w-full overflow-x-hidden`}
       >
-        <main>{children}</main>
+        <main className="w-full overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

@@ -15,7 +15,7 @@ const iconPaths = {
 export default function BenefitsSection() {
   return (
     <section className="w-full bg-opacity-20 py-8 mobile:py-12 tablet:py-16 overflow-hidden">
-      <div className="mx-auto px-4 mobile:px-6 tablet:px-8 max-w-[95%] tablet:max-w-[90%] desktop:max-w-6xl">
+      <div className="w-full mx-auto px-4 mobile:px-6 tablet:px-8 max-w-[100%] tablet:max-w-[100%] desktop:max-w-7xl">
         {/* Why Backyard Suites Matter Section */}
         <div className="mb-8 mobile:mb-12 tablet:mb-16 relative">
           <div className="text-center mb-6 mobile:mb-8 tablet:mb-10">
@@ -23,7 +23,7 @@ export default function BenefitsSection() {
               YOU MAY ASK...
             </p>
             <h2 className="font-heading text-xl mobile:text-2xl tablet:text-3xl desktop:text-[41px] text-primary mb-6 mobile:mb-8 tablet:mb-10 font-[400]">
-              WHY BACKYARD SUITES MATTER?
+              WHY DO BACKYARD SUITES MATTER?
             </h2>
           </div>
 
