@@ -10,10 +10,6 @@ const securityHeaders = [
     value: "1; mode=block",
   },
   {
-    key: "X-Frame-Options",
-    value: "SAMEORIGIN",
-  },
-  {
     key: "X-Content-Type-Options",
     value: "nosniff",
   },
@@ -27,7 +23,7 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca;`,
+    value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;`,
   },
 ];
 
