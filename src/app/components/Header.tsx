@@ -3,8 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("header");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -61,7 +63,7 @@ export default function Header() {
           aria-controls="mobile-menu"
         >
           <span className="sr-only">
-            {mobileMenuOpen ? "Close menu" : "Open menu"}
+            {mobileMenuOpen ? t("menu.close") : t("menu.open")}
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +94,7 @@ export default function Header() {
                 href="https://landseed.ca/"
                 className="font-heading text-neutral-darkest text-base desktop:text-lg font-medium hover:text-primary transition-colors"
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -100,7 +102,7 @@ export default function Header() {
                 href="https://www.landseed.ca/about"
                 className="font-heading text-neutral-darkest text-base desktop:text-lg font-medium hover:text-primary transition-colors"
               >
-                About Us
+                {t("aboutUs")}
               </Link>
             </li>
           </ul>
@@ -121,7 +123,7 @@ export default function Header() {
                 className="font-heading text-neutral-darkest text-lg font-medium hover:text-primary transition-colors block py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -130,7 +132,7 @@ export default function Header() {
                 className="font-heading text-neutral-darkest text-lg font-medium hover:text-primary transition-colors block py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About Us
+                {t("aboutUs")}
               </Link>
             </li>
           </ul>

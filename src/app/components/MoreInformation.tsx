@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type BookletData = {
   imageSrc: string;
@@ -9,16 +10,17 @@ type BookletData = {
 };
 
 const MoreInformation: React.FC = () => {
+  const t = useTranslations("moreInformation");
   const booklets: BookletData[] = [
     {
       imageSrc: "/images/booklet.jpg",
-      title: "Booklet",
+      title: t("booklets.booklet"),
       href: "/downloads/landseed-booklet.pdf",
       alt: "Landseed Booklet - Unlock Your Backyard Potential",
     },
     {
       imageSrc: "/images/technical-booklet.svg",
-      title: "Technical Booklet",
+      title: t("booklets.technicalBooklet"),
       href: "/downloads/landseed-technical-booklet.pdf",
       alt: "Landseed Technical Booklet with specifications and details",
     },
@@ -31,10 +33,10 @@ const MoreInformation: React.FC = () => {
         <div className="absolute mb-1 w-[709px] h-[162px] bg-orange-moreinfo opacity-60 z-0"></div>
         <div className="relative mb-10 w-[709px] h-[162px] z-10">
           <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light mb-3 pl-10 pt-10">
-            LEARN MORE ABOUT YOUR BACKYARD SUITE!
+            {t("subtitle")}
           </h3>
           <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-primary pl-10">
-            MORE INFORMATION
+            {t("title")}
           </h2>
         </div>
 

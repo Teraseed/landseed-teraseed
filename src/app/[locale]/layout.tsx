@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import type { Metadata, Viewport } from "next";
 import { Nunito_Sans, Suez_One } from "next/font/google";
 import Footer from "../components/Footer";

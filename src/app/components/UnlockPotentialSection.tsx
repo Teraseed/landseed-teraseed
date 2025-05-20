@@ -1,20 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function UnlockPotentialSection() {
+  const t = useTranslations("unlockPotential");
+
   const steps = [
     {
-      name: "ASSESS",
+      name: t("steps.assess"),
       image: "/images/assess.png",
       alt: "Property Assessment",
     },
     {
-      name: "SELECT",
+      name: t("steps.select"),
       image: "/images/select.png",
       alt: "Design Selection",
     },
     {
-      name: "BUILD",
+      name: t("steps.build"),
       image: "/images/build.png",
       alt: "Construction Process",
     },
@@ -26,15 +29,13 @@ export default function UnlockPotentialSection() {
         {/* Heading Section */}
         <div className="mb-8 mobile:mb-12 tablet:mb-16 max-w-4xl mx-auto">
           <p className="text-secondary-light font-heading text-[18px] mobile:text-[20px] tablet:text-[24px] mb-2 mobile:mb-3 tablet:mb-4">
-            WE DON&apos;T JUST BUILD.
+            {t("subtitle")}
           </p>
           <h2 className="font-heading text-[20px] tablet:text-[41px] text-primary mb-4 mobile:mb-6 tablet:mb-8 font-[400]">
-            WE UNLOCK POTENTIAL.
+            {t("title")}
           </h2>
           <p className="font-body text-gray-200 text-[14px] mobile:text-[16px] tablet:text-[18px] leading-relaxed max-w-3xl mx-auto">
-            At LandSeed, we help everyday homeowners turn backyard ideas into
-            real, livable spaces. We guide you through zoning, design, permits,
-            and construction — without jargon or stress.
+            {t("description")}
           </p>
         </div>
 

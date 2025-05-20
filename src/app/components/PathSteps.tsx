@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 type StepData = {
   number: string;
@@ -7,26 +8,27 @@ type StepData = {
 };
 
 const PathSteps: React.FC = () => {
+  const t = useTranslations("pathSteps");
   const steps: StepData[] = [
     {
       number: "01",
-      title: "Feasibility & Zoning",
-      description: "Free site check, bylaw review, and risk assessment",
+      title: t("steps.feasibility.title"),
+      description: t("steps.feasibility.description"),
     },
     {
       number: "02",
-      title: "Design Match & Quote",
-      description: "Floorplans, finish levels, and timeline estimate",
+      title: t("steps.design.title"),
+      description: t("steps.design.description"),
     },
     {
       number: "03",
-      title: "Permits & Financing",
-      description: "Rebates, grants, lender options, and forms",
+      title: t("steps.permits.title"),
+      description: t("steps.permits.description"),
     },
     {
       number: "04",
-      title: "Delivery & Setup",
-      description: "Transport, utility hook-up, handoff, and walkthrough",
+      title: t("steps.delivery.title"),
+      description: t("steps.delivery.description"),
     },
   ];
 
@@ -34,12 +36,10 @@ const PathSteps: React.FC = () => {
     <div className="w-full py-8 tablet:py-12 desktop:py-16 px-4 mb-16 tablet:mb-24 desktop:mb-32">
       <div className="max-w-6xl mx-auto">
         <h3 className="text-center font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light font-medium mb-3 tablet:mb-4 desktop:mb-6">
-          THESE ARE JUST THREE STORIES—YOURS MIGHT BE NEXT.
+          {t("subtitle")}
         </h3>
         <h2 className="text-center font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium mb-8 tablet:mb-12 desktop:mb-16 max-w-2xl mx-auto">
-          FROM DREAM TO MOVE-IN,
-          <br />
-          YOUR PATH IN 4 STEPS.
+          {t("title")}
         </h2>
 
         {/* Path visualization for larger screens */}

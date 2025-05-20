@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function MeetLandseedSection() {
+  const t = useTranslations("meetLandseed");
+
   return (
     <section className="py-16 px-4 mobile:px-8 tablet:px-16 w-full mx-auto">
       <div className="max-w-7xl mx-auto">
@@ -29,32 +32,23 @@ export default function MeetLandseedSection() {
           {/* Right side - Content */}
           <div className="w-full tablet:w-2/3 p-4 mobile:p-6 tablet:p-8 desktop:p-12">
             <p className="text-secondary-light font-heading text-[16px] mobile:text-[18px] mb-2">
-              MEET LANDSEED: YOUR GUIDE IN THE PROCESS
+              {t("subtitle")}
             </p>
 
             <h2 className="font-heading text-[20px] desktop:text-[40px] text-primary mb-4 tablet:mb-6 font-[400]">
-              WHAT IS LANDSEED?
+              {t("whatIs.title")}
             </h2>
 
             <p className="font-body text-gray-200 mb-6 tablet:mb-8 text-[14px] mobile:text-[16px] font-[300] leading-relaxed">
-              LandSeed is a non-profit organization. We are a team of
-              community-first development consultants connecting property
-              owners, builders, lenders, and city officials. We guide homeowners
-              through planning and construction to build backyard suites that
-              serve their goals—whether it&apos;s creating rental income,
-              welcoming guests, or housing loved ones.
+              {t("whatIs.description")}
             </p>
 
             <h2 className="font-heading text-[20px] desktop:text-[40px] text-primary mb-4 tablet:mb-6 font-[400]">
-              WHAT MAKES US DIFFERENT?
+              {t("whatMakesDifferent.title")}
             </h2>
 
             <p className="font-body text-gray-200 text-[14px] mobile:text-[16px] font-[300] leading-relaxed">
-              LandSeed is a community-first consulting team with hands-on zoning
-              and legal expertise. We are diverse and have experience working
-              across cultures and preferences. Our mindset is collaborative,
-              patient, and client-first. We aim to provide a tailor-made
-              experience from early planning all the way to project completion.
+              {t("whatMakesDifferent.description")}
             </p>
           </div>
         </div>

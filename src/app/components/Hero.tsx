@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./Header";
+import { useTranslations } from "next-intl";
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <div className="relative w-full h-[900px] mobile:h-[1100px] tablet:h-[1200px] desktop:h-[1353px] overflow-hidden">
       {/* Background Layers - bottom to top */}
@@ -53,10 +55,10 @@ export default function Hero() {
       <div className="relative z-20 px-4 pt-[8rem] tablet:pt-[12rem] desktop:pt-[16rem] pb-[4rem] tablet:pb-[6rem] desktop:pb-[8rem] max-w-[90%] tablet:max-w-[85%] desktop:max-w-[1000px] mx-auto">
         <div className="max-w-full tablet:max-w-[80%] desktop:max-w-[1000px]">
           <h1 className="font-heading text-gray-100 mb-4 text-[32px] tablet:text-[40px] desktop:text-[48px] leading-[1.16] font-[400]">
-            Unlock Your Backyard Potential
+            {t("title")}
           </h1>
           <p className="font-body text-[18px] tablet:text-[20px] desktop:text-[24px] leading-[1.32] font-[300] tracking-[0.96px] text-gray-200 mb-6 tablet:mb-8">
-            Discover the Versatile Benefits of Adding a Tiny Home.
+            {t("subtitle")}
           </p>
           {/* CTA Button */}
           <div className="max-w-full tablet:max-w-[300px] desktop:max-w-[350px]">
@@ -68,7 +70,7 @@ export default function Hero() {
                rounded-[5px] hover:opacity-90"
             >
               <span className="uppercase font-medium font-body text-[12px] tablet:text-[14px] desktop:text-[16px] leading-[150%] tracking-[1.5px] tablet:tracking-[2px] desktop:tracking-[2.48px]">
-                Sign up to book the free property assessment
+                {t("cta")}
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

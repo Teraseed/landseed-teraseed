@@ -2,6 +2,8 @@ import Hero from "../components/Hero";
 import BenefitsSection from "../components/BenefitsSection";
 import MeetLandseedSection from "../components/MeetLandseedSection";
 import dynamic from "next/dynamic";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 
 // Dynamically import below-the-fold components
 const UnlockPotentialSection = dynamic(
@@ -39,7 +41,16 @@ const MoreInformation = dynamic(() => import("../components/MoreInformation"), {
   ssr: true,
 });
 
-export default function Home() {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function Home() {
   return (
     <div className="w-full overflow-x-hidden">
       <Hero />

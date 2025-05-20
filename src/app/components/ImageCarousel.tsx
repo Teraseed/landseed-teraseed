@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const ImageCarousel: React.FC = () => {
+  const t = useTranslations("imageCarousel");
   const images = [
     {
       src: "/images/living.png",
@@ -87,10 +89,10 @@ const ImageCarousel: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8">
           <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
-            IMAGINATION
+            {t("subtitle")}
           </h3>
           <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
-            LET&apos;S SEE WHAT IT LOOKS LIKE.....
+            {t("title")}
           </h2>
         </div>
 

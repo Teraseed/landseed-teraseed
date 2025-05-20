@@ -75,7 +75,25 @@
     }
   },
   "testimonials": {
-    "title": "REAL LIVES, REAL IMPACT"
+    "title": "REAL LIVES, REAL IMPACT",
+    "susan": {
+      "name": "Susan Chen",
+      "age": "65",
+      "quote": "Having my parents close by has been a blessing.",
+      "description": "The backyard suite has allowed my aging parents to live independently while staying connected to family. It's the perfect balance of privacy and support."
+    },
+    "leo": {
+      "name": "Leo Rodriguez",
+      "age": "32",
+      "quote": "This investment has transformed our financial future.",
+      "description": "The rental income from our backyard suite has helped us pay off our mortgage faster and build a more secure financial foundation for our family."
+    },
+    "maya": {
+      "name": "Maya Patel",
+      "age": "28",
+      "quote": "It's like having a guest house without the hassle.",
+      "description": "We use our backyard suite for visiting family and friends. It's been amazing to have a comfortable, private space for our guests while maintaining our own space."
+    }
   },
   "pathSteps": {
     "subtitle": "THESE ARE JUST THREE STORIES—YOURS MIGHT BE NEXT.",
@@ -118,5 +136,10 @@
       "booklet": "Booklet",
       "technicalBooklet": "Technical Booklet"
     }
+  },
+  "footer": {
+    "copyright": "Copyright © {year} LandSeed",
+    "rightsReserved": "All rights reserved",
+    "contactUs": "Contact us"
   }
 }

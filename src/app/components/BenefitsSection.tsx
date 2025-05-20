@@ -1,6 +1,7 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 // Define icon paths
 const iconPaths = {
@@ -13,6 +14,8 @@ const iconPaths = {
 };
 
 export default function BenefitsSection() {
+  const t = useTranslations("benefits");
+
   return (
     <section className="w-full bg-opacity-20 py-8 mobile:py-12 tablet:py-16 overflow-hidden">
       <div className="w-full mx-auto px-4 mobile:px-6 tablet:px-8 max-w-[100%] tablet:max-w-[100%] desktop:max-w-7xl">
@@ -20,10 +23,10 @@ export default function BenefitsSection() {
         <div className="mb-8 mobile:mb-12 tablet:mb-16 relative">
           <div className="text-center mb-6 mobile:mb-8 tablet:mb-10">
             <p className="text-secondary-light font-heading text-lg mobile:text-xl tablet:text-[24px] font-[400] mb-2">
-              YOU MAY ASK...
+              {t("whyMatter.subtitle")}
             </p>
             <h2 className="font-heading text-xl mobile:text-2xl tablet:text-3xl desktop:text-[41px] text-primary mb-6 mobile:mb-8 tablet:mb-10 font-[400]">
-              WHY DO BACKYARD SUITES MATTER?
+              {t("whyMatter.title")}
             </h2>
           </div>
 
@@ -48,8 +51,8 @@ export default function BenefitsSection() {
                   alt="Housing Crisis"
                 />
               }
-              title="Housing Crisis"
-              description="Ontario is short over 50,000 affordable homes. Backyard suites add options—without building new towers."
+              title={t("whyMatter.features.housingCrisis.title")}
+              description={t("whyMatter.features.housingCrisis.description")}
             />
 
             <FeatureCard
@@ -61,8 +64,8 @@ export default function BenefitsSection() {
                   alt="Family Support"
                 />
               }
-              title="Family Support"
-              description="Aging parents or adult kids can live independently, just steps from home."
+              title={t("whyMatter.features.familySupport.title")}
+              description={t("whyMatter.features.familySupport.description")}
             />
 
             <FeatureCard
@@ -74,8 +77,8 @@ export default function BenefitsSection() {
                   alt="Rental Income"
                 />
               }
-              title="Rental Income"
-              description="Backyard suites can bring in $1,500-$2,000/month in long-term rent."
+              title={t("whyMatter.features.rentalIncome.title")}
+              description={t("whyMatter.features.rentalIncome.description")}
             />
 
             <div className="absolute right-[-38px] bottom-[-38px] z-[-1] hidden tablet:block">
@@ -94,7 +97,7 @@ export default function BenefitsSection() {
         <div className="mt-12 mobile:mt-20 tablet:mt-28 relative">
           <div className="text-center mb-6 mobile:mb-8 tablet:mb-10">
             <h2 className="font-heading text-xl mobile:text-2xl tablet:text-3xl desktop:text-[41px] text-primary mb-6 mobile:mb-8 tablet:mb-10 font-[400]">
-              AND WHY NOW?
+              {t("whyNow.title")}
             </h2>
           </div>
 
@@ -119,8 +122,8 @@ export default function BenefitsSection() {
                   alt="Rising Costs"
                 />
               }
-              title="Rising Costs"
-              description="Families are being priced out—backyard units are a more accessible solution."
+              title={t("whyNow.features.risingCosts.title")}
+              description={t("whyNow.features.risingCosts.description")}
             />
 
             <FeatureCard
@@ -132,8 +135,8 @@ export default function BenefitsSection() {
                   alt="Legal Changes"
                 />
               }
-              title="Legal Changes"
-              description="Many Ontario cities now allow backyard suites by right. No zoning battle required."
+              title={t("whyNow.features.legalChanges.title")}
+              description={t("whyNow.features.legalChanges.description")}
             />
 
             <FeatureCard
@@ -145,8 +148,8 @@ export default function BenefitsSection() {
                   alt="Smart Growth"
                 />
               }
-              title="Smart Growth"
-              description="It's local, sustainable, and makes better use of land we already have."
+              title={t("whyNow.features.smartGrowth.title")}
+              description={t("whyNow.features.smartGrowth.description")}
             />
             <div className="absolute right-[-38px] bottom-[-38px] z-[-1] hidden tablet:block">
               <Image
