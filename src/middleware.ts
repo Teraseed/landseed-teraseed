@@ -1,14 +1,11 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
 
-// 临时禁用中间件，只返回原始响应
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function middleware(request: NextRequest) {
-  // 简单地返回原始响应，不做任何修改
-  return NextResponse.next();
-}
+export default createMiddleware(routing);
 
-// 配置中间件适用于所有路由
 export const config = {
-  matcher: "/:path*",
+  // Match all pathnames except for
+  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
 };

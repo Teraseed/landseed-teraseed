@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "TeraSeed",
+    "description": "TeraSeed by LandSeed"
+  },
+  "header": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    }
+  },
+  "hero": {
+    "title": "Unlock Your Backyard Potential",
+    "subtitle": "Discover the Versatile Benefits of Adding a Tiny Home.",
+    "cta": "Sign up to book the free property assessment"
+  },
+  "benefits": {
+    "whyMatter": {
+      "subtitle": "YOU MAY ASK...",
+      "title": "WHY DO BACKYARD SUITES MATTER?",
+      "features": {
+        "housingCrisis": {
+          "title": "Housing Crisis",
+          "description": "Ontario is short over 50,000 affordable homes. Backyard suites add options—without building new towers."
+        },
+        "familySupport": {
+          "title": "Family Support",
+          "description": "Aging parents or adult kids can live independently, just steps from home."
+        },
+        "rentalIncome": {
+          "title": "Rental Income",
+          "description": "Backyard suites can bring in $1,500-$2,000/month in long-term rent."
+        }
+      }
+    },
+    "whyNow": {
+      "title": "AND WHY NOW?",
+      "features": {
+        "risingCosts": {
+          "title": "Rising Costs",
+          "description": "Families are being priced out—backyard units are a more accessible solution."
+        },
+        "legalChanges": {
+          "title": "Legal Changes",
+          "description": "Many Ontario cities now allow backyard suites by right. No zoning battle required."
+        },
+        "smartGrowth": {
+          "title": "Smart Growth",
+          "description": "It's local, sustainable, and makes better use of land we already have."
+        }
+      }
+    }
+  },
+  "meetLandseed": {
+    "subtitle": "MEET LANDSEED: YOUR GUIDE IN THE PROCESS",
+    "whatIs": {
+      "title": "WHAT IS LANDSEED?",
+      "description": "LandSeed is a non-profit organization. We are a team of community-first development consultants connecting property owners, builders, lenders, and city officials. We guide homeowners through planning and construction to build backyard suites that serve their goals—whether it's creating rental income, welcoming guests, or housing loved ones."
+    },
+    "whatMakesDifferent": {
+      "title": "WHAT MAKES US DIFFERENT?",
+      "description": "LandSeed is a community-first consulting team with hands-on zoning and legal expertise. We are diverse and have experience working across cultures and preferences. Our mindset is collaborative, patient, and client-first. We aim to provide a tailor-made experience from early planning all the way to project completion."
+    }
+  },
+  "unlockPotential": {
+    "subtitle": "WE DON'T JUST BUILD.",
+    "title": "WE UNLOCK POTENTIAL.",
+    "description": "At LandSeed, we help everyday homeowners turn backyard ideas into real, livable spaces. We guide you through zoning, design, permits, and construction — without jargon or stress.",
+    "steps": {
+      "assess": "ASSESS",
+      "select": "SELECT",
+      "build": "BUILD"
+    }
+  },
+  "testimonials": {
+    "title": "REAL LIVES, REAL IMPACT"
+  },
+  "pathSteps": {
+    "subtitle": "THESE ARE JUST THREE STORIES—YOURS MIGHT BE NEXT.",
+    "title": "FROM DREAM TO MOVE-IN,\nYOUR PATH IN 4 STEPS.",
+    "steps": {
+      "feasibility": {
+        "number": "01",
+        "title": "Feasibility & Zoning",
+        "description": "Free site check, bylaw review, and risk assessment"
+      },
+      "design": {
+        "number": "02",
+        "title": "Design Match & Quote",
+        "description": "Floorplans, finish levels, and timeline estimate"
+      },
+      "permits": {
+        "number": "03",
+        "title": "Permits & Financing",
+        "description": "Rebates, grants, lender options, and forms"
+      },
+      "delivery": {
+        "number": "04",
+        "title": "Delivery & Setup",
+        "description": "Transport, utility hook-up, handoff, and walkthrough"
+      }
+    }
+  },
+  "imageCarousel": {
+    "subtitle": "IMAGINATION",
+    "title": "LET'S SEE WHAT IT LOOKS LIKE....."
+  },
+  "contactForm": {
+    "subtitle": "BOOK YOUR FREE PROPERTY ASSESSMENT",
+    "title": "LET'S BRING YOUR BACKYARD SUITE TO LIFE STARTING TODAY!"
+  },
+  "moreInformation": {
+    "subtitle": "LEARN MORE ABOUT YOUR BACKYARD SUITE!",
+    "title": "MORE INFORMATION",
+    "booklets": {
+      "booklet": "Booklet",
+      "technicalBooklet": "Technical Booklet"
+    }
+  }
+}

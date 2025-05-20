@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-// 只保留必要的安全头，并确保它们不会阻止iframe嵌入
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -52,4 +52,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);

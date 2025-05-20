@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "TeraSeed",
+    "description": "TeraSeed by LandSeed"
+  },
+  "header": {
+    "home": "首页",
+    "aboutUs": "关于我们",
+    "menu": {
+      "open": "打开菜单",
+      "close": "关闭菜单"
+    }
+  },
+  "hero": {
+    "title": "释放您的后院潜力",
+    "subtitle": "探索添加微型住宅的多重好处。",
+    "cta": "注册预约免费房产评估"
+  },
+  "benefits": {
+    "whyMatter": {
+      "subtitle": "您可能会问...",
+      "title": "为什么后院套房很重要？",
+      "features": {
+        "housingCrisis": {
+          "title": "住房危机",
+          "description": "安大略省缺少超过50,000套经济适用房。后院套房提供了更多选择——无需建造新高层建筑。"
+        },
+        "familySupport": {
+          "title": "家庭支持",
+          "description": "年迈的父母或成年子女可以独立生活，就在家门口。"
+        },
+        "rentalIncome": {
+          "title": "租金收入",
+          "description": "后院套房每月可带来1,500-2,000加元的长期租金收入。"
+        }
+      }
+    },
+    "whyNow": {
+      "title": "为什么是现在？",
+      "features": {
+        "risingCosts": {
+          "title": "成本上升",
+          "description": "家庭正面临房价上涨——后院单元是一个更实惠的解决方案。"
+        },
+        "legalChanges": {
+          "title": "法律变更",
+          "description": "许多安大略省城市现在允许建造后院套房。无需进行分区斗争。"
+        },
+        "smartGrowth": {
+          "title": "智慧增长",
+          "description": "这是本地化、可持续的，能更好地利用我们已有的土地。"
+        }
+      }
+    }
+  },
+  "meetLandseed": {
+    "subtitle": "认识LandSeed：您的过程指南",
+    "whatIs": {
+      "title": "什么是LandSeed？",
+      "description": "LandSeed是一个非营利组织。我们是一个以社区为先的开发顾问团队，连接业主、建筑商、贷款机构和市政官员。我们指导房主完成规划和建设，建造满足其目标的后院套房——无论是创造租金收入、接待客人，还是安置亲人。"
+    },
+    "whatMakesDifferent": {
+      "title": "我们的与众不同之处",
+      "description": "LandSeed是一个以社区为先的咨询团队，拥有实践经验和分区法律专业知识。我们多元化，有跨文化和不同偏好的工作经验。我们的理念是协作、耐心和以客户为先。我们旨在从早期规划到项目完成提供量身定制的体验。"
+    }
+  },
+  "unlockPotential": {
+    "subtitle": "我们不仅仅是建造。",
+    "title": "我们释放潜力。",
+    "description": "在LandSeed，我们帮助普通房主将后院想法变成真实、宜居的空间。我们指导您完成分区、设计、许可和施工——没有专业术语和压力。",
+    "steps": {
+      "assess": "评估",
+      "select": "选择",
+      "build": "建造"
+    }
+  },
+  "testimonials": {
+    "title": "真实生活，真实影响"
+  },
+  "pathSteps": {
+    "subtitle": "这只是三个故事——下一个可能是您的。",
+    "title": "从梦想到家，\n您的四步之路。",
+    "steps": {
+      "feasibility": {
+        "number": "01",
+        "title": "可行性及分区",
+        "description": "免费场地检查、法规审查和风险评估"
+      },
+      "design": {
+        "number": "02",
+        "title": "设计匹配与报价",
+        "description": "平面图、装修等级和时间线估算"
+      },
+      "permits": {
+        "number": "03",
+        "title": "许可与融资",
+        "description": "退税、补助金、贷款选择和表格"
+      },
+      "delivery": {
+        "number": "04",
+        "title": "交付与安装",
+        "description": "运输、水电连接、交接和参观"
+      }
+    }
+  },
+  "imageCarousel": {
+    "subtitle": "想象",
+    "title": "让我们看看它的样子....."
+  },
+  "contactForm": {
+    "subtitle": "预约您的免费房产评估",
+    "title": "让我们从今天开始，让您的后院套房梦想成真！"
+  },
+  "moreInformation": {
+    "subtitle": "了解更多关于您的后院套房！",
+    "title": "更多信息",
+    "booklets": {
+      "booklet": "手册",
+      "technicalBooklet": "技术手册"
+    }
+  }
+}
