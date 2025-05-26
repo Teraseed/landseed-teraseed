@@ -34,7 +34,7 @@ const PathSteps: React.FC = () => {
 
   return (
     <div className="w-full py-8 tablet:py-12 desktop:py-16 px-4 mb-16 tablet:mb-24 desktop:mb-32">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h3 className="text-center font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light font-medium mb-3 tablet:mb-4 desktop:mb-6">
           {t("subtitle")}
         </h3>
@@ -93,7 +93,7 @@ const PathSteps: React.FC = () => {
           </div>
 
           {/* Step 4 - Right */}
-          <div className="absolute right-[5%] tablet:right-[-2%] desktop:right-[-3%] top-[50%] w-[120px] tablet:w-[160px] desktop:w-[220px]">
+          <div className="absolute right-[5%] tablet:right-[1%]  top-[50%] w-[120px] tablet:w-[160px] desktop:w-[220px]">
             <h3 className="font-heading text-2xl tablet:text-3xl desktop:text-5xl text-[#566e5a] font-medium">
               {steps[3].number}
             </h3>

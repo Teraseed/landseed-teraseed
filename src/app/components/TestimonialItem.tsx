@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 export type TestimonialProps = {
   name: string;
@@ -17,6 +18,8 @@ const TestimonialItem: React.FC<TestimonialProps> = ({
   description,
   offset = 0,
 }) => {
+  const t = useTranslations("testimonials");
+
   return (
     <div
       className="flex flex-row items-start w-full mb-10 mx-auto"
@@ -33,7 +36,7 @@ const TestimonialItem: React.FC<TestimonialProps> = ({
           </p>
           <div className="text-right">
             <p className="font-body text-neutral-darkest text-[12px] mobile:text-[13px] tablet:text-[14px] desktop:text-[16px] font-[300]">
-              {name}, {age} years old.
+              {name}, {age} {t("yearsOld")}
             </p>
             <p className="font-body text-neutral-darkest text-[12px] mobile:text-[13px] tablet:text-[14px] desktop:text-[16px] font-[300]">
               {description}

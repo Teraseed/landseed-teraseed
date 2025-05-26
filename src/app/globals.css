@@ -1,77 +1,99 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom breakpoints for Figma designs */
+  /* ===== BREAKPOINTS ===== */
   --breakpoint-mobile: 25.125rem; /* 402px */
   --breakpoint-tablet: 52.125rem; /* 834px */
   --breakpoint-desktop: 90rem; /* 1440px */
 
-  /* Primary Colors - Green tones */
-  --color-primary: #647b64; /* neutral-500 */
-  --color-primary-light: #66ac66; /* neutral-500-75 */
-  --color-primary-dark: #183428; /* gray-800 */
-  --color-primary-darker: #27372d; /* zinc-800 */
+  /* ===== PRIMARY COLORS (Green Tones) ===== */
+  --color-primary: #647b64; /* Main green */
+  --color-primary-light: #66ac66; /* Light green for gradients */
+  --color-primary-dark: #183428; /* Dark green for icons */
 
-  /* Secondary Colors - Orange/Red tones */
-  --color-secondary: #d16035; /* red-500 */
-  --color-secondary-light: #f3b562; /* orange-300 */
-  --color-secondary-dark: #bf4033; /* orange-700 */
-  --color-secondary-darker: #982e23; /* orange-800 */
-  --color-secondary-100: #f0dcc5; /*footer background color*/
+  /* ===== SECONDARY COLORS (Orange Tones) ===== */
+  --color-secondary: #d16035; /* Main orange - language switch, accents */
+  --color-secondary-light: #f3b562; /* Light orange for subtitles */
+  --color-secondary-100: #f0dcc5; /* Footer background */
 
-  /* Neutral Colors - Grayscale */
-  --color-neutral-darkest: #000000; /* black */
-  --color-neutral-darker: #121212; /* neutral-900 */
-  --color-neutral-dark: #393635; /* neutral-700 */
-  --color-neutral-medium: #9b9795; /* stone-400 */
-  --color-neutral-light: #f6f2ef; /* stone-100 */
-  --color-neutral-lighter: #faf8f7; /* stone-50 */
-  --color-neutral-lightest: #ffffff; /* white */
-  --color-gray-100: #333333;
-  --color-gray-200: #4f4f4f;
-  --color-white-text: #fefefe;
-  --color-neutral-background: #f9f3f0;
+  /* ===== NEUTRAL COLORS ===== */
+  --color-neutral-darkest: #000000; /* Black text */
+  --color-neutral-lightest: #ffffff; /* White backgrounds */
 
-  /* Accent Colors */
-  --color-accent-warm: #efdcc6; /* red-200 */
-  --color-accent-neutral: #fafafa; /* neutral-50 */
+  /* ===== GRAY SCALE ===== */
+  --color-gray-100: #333333; /* Dark gray for headings */
+  --color-gray-200: #4f4f4f; /* Medium gray for body text */
+  --color-white-text: #fefefe; /* Off-white for button text */
 
-  /* Opacity Variants */
-  --color-neutral-darker-90: rgba(18, 18, 18, 0.9); /* neutral-900/90 */
-  --color-neutral-darker-60: rgba(18, 18, 18, 0.6); /* neutral-900/60 */
-  --color-neutral-darker-40: rgba(18, 18, 18, 0.4); /* neutral-900/40 */
-  --color-secondary-50: rgba(209, 96, 53, 0.5); /* red-500/50 */
-  --color-accent-warm-50: rgba(239, 220, 198, 0.5); /* red-200/50 */
+  /* ===== SPECIFIC COLORS ===== */
+  /* Used frequently throughout components for headings */
+  --color-text-primary: #566e5a; /* Green-gray for titles */
 
+  /* ===== BACKGROUND COLORS ===== */
+  --color-neutral-background: #f9f3f0; /* Page background tint */
+
+  /* ===== SHADOWS ===== */
   --shadow-button: 0px 20px 40px 0px rgba(128, 143, 150, 0.19);
 }
 
-/* Font Settings */
+/* ===== TYPOGRAPHY ===== */
+
+/* Base font settings */
 html,
 body {
-  font-family: var(--font-nunito-sans), system-ui, sans-serif;
+  font-family: var(--font-nunito-sans), var(--font-noto-serif-sc), system-ui,
+    sans-serif;
   width: 100%;
   height: 100%;
 }
 
+/* Heading fonts */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-suez-one), serif;
+  font-family: var(--font-suez-one), var(--font-noto-sans-sc), serif;
 }
 
 /* Utility font classes */
 .font-heading {
-  font-family: var(--font-suez-one), serif;
+  font-family: var(--font-suez-one), var(--font-noto-sans-sc), serif;
 }
 
 .font-body {
-  font-family: var(--font-nunito-sans), system-ui, sans-serif;
+  font-family: var(--font-nunito-sans), var(--font-noto-serif-sc), system-ui,
+    sans-serif;
 }
 
+/* ===== INTERNATIONALIZATION ===== */
+
+/* Chinese text specific styles */
+[lang="zh"] {
+  font-family: var(--font-noto-serif-sc), system-ui, sans-serif;
+}
+
+[lang="zh"] h1,
+[lang="zh"] h2,
+[lang="zh"] h3,
+[lang="zh"] h4,
+[lang="zh"] h5,
+[lang="zh"] h6 {
+  font-family: var(--font-noto-sans-sc), serif;
+}
+
+/* ===== CUSTOM BACKGROUNDS ===== */
+
+/* Main page background */
+.bg-page {
+  background-image: url("/images/background-blur-color.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Testimonial card gradient overlay */
 .bg-orange-gradient {
   background: linear-gradient(
       198deg,
@@ -82,13 +104,7 @@ h6 {
     rgba(240, 220, 197, 0.5);
 }
 
-.bg-page {
-  background-image: url("/images/background-blur-color.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+/* More information section gradient */
 .bg-orange-moreinfo {
   background: linear-gradient(
     198deg,

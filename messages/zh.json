@@ -4,7 +4,7 @@
     "description": "TeraSeed by LandSeed"
   },
   "header": {
-    "home": "首页",
+    "home": "主页",
     "aboutUs": "关于我们",
     "menu": {
       "open": "打开菜单",
@@ -12,62 +12,62 @@
     }
   },
   "hero": {
-    "title": "释放您的后院潜力",
-    "subtitle": "探索添加微型住宅的多重好处。",
-    "cta": "注册预约免费房产评估"
+    "title": "释放后院的无限可能",
+    "subtitle": "打造多功能小屋，开启全新生活方式",
+    "cta": "立即注册，预约免费的物业评估"
   },
   "benefits": {
     "whyMatter": {
-      "subtitle": "您可能会问...",
-      "title": "为什么后院套房很重要？",
+      "subtitle": "你可能会问……",
+      "title": "为什么后院小屋如此重要？",
       "features": {
         "housingCrisis": {
           "title": "住房危机",
-          "description": "安大略省缺少超过50,000套经济适用房。后院套房提供了更多选择——无需建造新高层建筑。"
+          "description": "安省目前缺少超过50,000套可负担住房。后院小屋为住房提供了更多选择，无需兴建高楼大厦。"
         },
         "familySupport": {
           "title": "家庭支持",
-          "description": "年迈的父母或成年子女可以独立生活，就在家门口。"
+          "description": "年迈的父母或成年的子女可以在家附近拥有独立生活空间，既方便又有尊严。"
         },
         "rentalIncome": {
           "title": "租金收入",
-          "description": "后院套房每月可带来1,500-2,000加元的长期租金收入。"
+          "description": "通过出租后院小屋，每月可带来$1,500–$2,000的长期稳定收入。"
         }
       }
     },
     "whyNow": {
-      "title": "为什么是现在？",
+      "title": "为什么现在是最佳时机？",
       "features": {
         "risingCosts": {
           "title": "成本上升",
-          "description": "家庭正面临房价上涨——后院单元是一个更实惠的解决方案。"
+          "description": "越来越多家庭因高房价而无力购房，后院单元成为更可负担的替代方案。"
         },
         "legalChanges": {
-          "title": "法律变更",
-          "description": "许多安大略省城市现在允许建造后院套房。无需进行分区斗争。"
+          "title": "法律变动",
+          "description": "安省多个城市现已明确允许建造后院小屋，无需经历繁琐的土地用途审批。"
         },
         "smartGrowth": {
-          "title": "智慧增长",
-          "description": "这是本地化、可持续的，能更好地利用我们已有的土地。"
+          "title": "智慧发展",
+          "description": "这是本地化、可持续的发展方式，更高效地利用现有土地资源。"
         }
       }
     }
   },
   "meetLandseed": {
-    "subtitle": "认识LandSeed：您的过程指南",
+    "subtitle": "认识LandSeed：您安心建屋的向导",
     "whatIs": {
-      "title": "什么是LandSeed？",
-      "description": "LandSeed是一个非营利组织。我们是一个以社区为先的开发顾问团队，连接业主、建筑商、贷款机构和市政官员。我们指导房主完成规划和建设，建造满足其目标的后院套房——无论是创造租金收入、接待客人，还是安置亲人。"
+      "title": "LandSeed是谁？",
+      "description": "LandSeed是一家非营利机构，由一群以社区为本的发展顾问组成。我们致力于连接业主、建商、土地使用者与市政官员，陪伴屋主完成后院小屋的规划与建设，不论您是想增加租金收入、接待亲友，还是为家人提供独立空间，我们都能为您量身打造解决方案。"
     },
     "whatMakesDifferent": {
-      "title": "我们的与众不同之处",
-      "description": "LandSeed是一个以社区为先的咨询团队，拥有实践经验和分区法律专业知识。我们多元化，有跨文化和不同偏好的工作经验。我们的理念是协作、耐心和以客户为先。我们旨在从早期规划到项目完成提供量身定制的体验。"
+      "title": "我们为何与众不同？",
+      "description": "LandSeed是一个以社区为中心的专业团队，具备实战经验和扎实的土地规划及法律知识。我们团队多元、跨文化背景丰富，能够理解不同文化与家庭的独特需求。我们秉持协作、耐心、以客户为先的理念，从最初的想法到落地建成，始终提供贴心、定制化的服务体验。"
     }
   },
   "unlockPotential": {
-    "subtitle": "我们不仅仅是建造。",
-    "title": "我们释放潜力。",
-    "description": "在LandSeed，我们帮助普通房主将后院想法变成真实、宜居的空间。我们指导您完成分区、设计、许可和施工——没有专业术语和压力。",
+    "subtitle": "我们不只是建造者。",
+    "title": "我们更能挖掘家的无限可能。",
+    "description": "在LandSeed，我们帮助普通屋主将对后院的想象变成宜居现实。从法规、设计、申请许可到施工全过程，我们都会全程陪伴，用最简单清晰的方式，帮您实现家的更多可能。",
     "steps": {
       "assess": "评估",
       "select": "选择",
@@ -75,70 +75,71 @@
     }
   },
   "testimonials": {
-    "title": "真实生活，真实影响",
+    "title": "真实生活，真实改变",
+    "yearsOld": "岁",
     "susan": {
-      "name": "陈苏珊",
-      "age": "65",
-      "quote": "让父母住在附近是一种福气。",
-      "description": "后院套房让我的年迈父母能够独立生活，同时保持与家人的联系。这是隐私和支持的完美平衡。"
+      "name": "Susan",
+      "age": "33",
+      "quote": "我们为妈妈建了间小屋——她有了独立空间，我们也更安心了。",
+      "description": "照顾年迈母亲的女儿"
     },
     "leo": {
-      "name": "里奥·罗德里格斯",
-      "age": "32",
-      "quote": "这项投资改变了我们的财务未来。",
-      "description": "后院套房的租金收入帮助我们更快地还清房贷，为家庭建立更安全的财务基础。"
+      "name": "Leo",
+      "age": "40",
+      "quote": "我的办公室离厨房只有20步，这是我为事业做过最明智的决定。",
+      "description": "在自家后院打造事业"
     },
     "maya": {
-      "name": "玛雅·帕特尔",
-      "age": "28",
-      "quote": "就像拥有一个没有麻烦的客房。",
-      "description": "我们用后院套房接待来访的家人和朋友。能够为客人提供舒适、私密的空间，同时保持我们自己的空间，真是太棒了。"
+      "name": "Maya",
+      "age": "58",
+      "quote": "我们现在每月靠出租小屋有$1,500的稳定收入。",
+      "description": "把后院变成持续收益的法宝"
     }
   },
   "pathSteps": {
-    "subtitle": "这只是三个故事——下一个可能是您的。",
-    "title": "从梦想到家，\n您的四步之路。",
+    "subtitle": "这只是三个真实故事——下一个主角，可能就是你。",
+    "title": "从梦想到入住，\n只需4步",
     "steps": {
       "feasibility": {
         "number": "01",
-        "title": "可行性及分区",
-        "description": "免费场地检查、法规审查和风险评估"
+        "title": "可行性评估与选址规划",
+        "description": "免费上门勘查、法规审查与风险评估。"
       },
       "design": {
         "number": "02",
         "title": "设计匹配与报价",
-        "description": "平面图、装修等级和时间线估算"
+        "description": "户型方案、装修标准与施工周期预估。"
       },
       "permits": {
         "number": "03",
-        "title": "许可与融资",
-        "description": "退税、补助金、贷款选择和表格"
+        "title": "申请许可与融资支持",
+        "description": "政府补贴、贷款方案及所需文件指导。"
       },
       "delivery": {
         "number": "04",
-        "title": "交付与安装",
-        "description": "运输、水电连接、交接和参观"
+        "title": "运送安装与交付入住",
+        "description": "小屋运输、接通水电、交付验收与使用指导。"
       }
     }
   },
   "imageCarousel": {
-    "subtitle": "想象",
-    "title": "让我们看看它的样子....."
+    "subtitle": "想象一下",
+    "title": "来看看它将是什么样子……"
   },
   "contactForm": {
-    "subtitle": "预约您的免费房产评估",
-    "title": "让我们从今天开始，让您的后院套房梦想成真！"
+    "subtitle": "预约您的免费物业评估",
+    "title": "让您的后院小屋从今天开始变成现实！"
   },
   "moreInformation": {
-    "subtitle": "了解更多关于您的后院套房！",
+    "subtitle": "了解更多关于您的后院小屋！",
     "title": "更多信息",
     "booklets": {
-      "booklet": "手册",
-      "technicalBooklet": "技术手册"
+      "booklet": "宣传手册",
+      "technicalBooklet": "技术资料手册"
     }
   },
   "footer": {
-    "copyright": "版权所有 © {year} LandSeed",
+    "copyright": "版权 © {year} LandSeed",
     "rightsReserved": "保留所有权利",
     "contactUs": "联系我们"
   }

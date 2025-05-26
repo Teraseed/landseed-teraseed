@@ -31,7 +31,7 @@
         },
         "rentalIncome": {
           "title": "Rental Income",
-          "description": "Backyard suites can bring in $1,500-$2,000/month in long-term rent."
+          "description": "Backyard suites can bring in $1,500–$2,000/month in long-term rent."
         }
       }
     },
@@ -76,23 +76,24 @@
   },
   "testimonials": {
     "title": "REAL LIVES, REAL IMPACT",
+    "yearsOld": "years old",
     "susan": {
-      "name": "Susan Chen",
-      "age": "65",
-      "quote": "Having my parents close by has been a blessing.",
-      "description": "The backyard suite has allowed my aging parents to live independently while staying connected to family. It's the perfect balance of privacy and support."
+      "name": "Susan",
+      "age": "33",
+      "quote": "We built a suite for Mom—now she has her own space, and we have peace of mind.",
+      "description": "Caring for her elderly mother."
     },
     "leo": {
-      "name": "Leo Rodriguez",
-      "age": "32",
-      "quote": "This investment has transformed our financial future.",
-      "description": "The rental income from our backyard suite has helped us pay off our mortgage faster and build a more secure financial foundation for our family."
+      "name": "Leo",
+      "age": "40",
+      "quote": "My office is just 20 steps from my kitchen. This is the best decision that I made for my business.",
+      "description": "Building a career from his backyard."
     },
     "maya": {
-      "name": "Maya Patel",
-      "age": "28",
-      "quote": "It's like having a guest house without the hassle.",
-      "description": "We use our backyard suite for visiting family and friends. It's been amazing to have a comfortable, private space for our guests while maintaining our own space."
+      "name": "Maya",
+      "age": "58",
+      "quote": "We now earn $1,500/month renting to a long-term tenant.",
+      "description": "Turning a yard into monthly income."
     }
   },
   "pathSteps": {
@@ -102,22 +103,22 @@
       "feasibility": {
         "number": "01",
         "title": "Feasibility & Zoning",
-        "description": "Free site check, bylaw review, and risk assessment"
+        "description": "Free site check, bylaw review, and risk assessment."
       },
       "design": {
         "number": "02",
         "title": "Design Match & Quote",
-        "description": "Floorplans, finish levels, and timeline estimate"
+        "description": "Floorplans, finish levels, and timeline estimate."
       },
       "permits": {
         "number": "03",
         "title": "Permits & Financing",
-        "description": "Rebates, grants, lender options, and forms"
+        "description": "Rebates, grants, lender options, and forms."
       },
       "delivery": {
         "number": "04",
         "title": "Delivery & Setup",
-        "description": "Transport, utility hook-up, handoff, and walkthrough"
+        "description": "Transport, utility hook-up, handoff, and walkthrough."
       }
     }
   },

@@ -2,8 +2,10 @@
 
 import React, { useRef } from "react";
 import Script from "next/script";
+import { useTranslations } from "next-intl";
 
 const ContactForm: React.FC = () => {
+  const t = useTranslations("contactForm");
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   return (
@@ -15,10 +17,10 @@ const ContactForm: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-8 text-center">
           <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
-            BOOK YOUR FREE PROPERTY ASSESSMENT
+            {t("subtitle")}
           </h3>
           <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
-            LET&apos;S BRING YOUR BACKYARD SUITE TO LIFE STARTING TODAY!
+            {t("title")}
           </h2>
         </div>
 
