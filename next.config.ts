@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const isDev = process.env.NODE_ENV === "development";
-
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -26,9 +24,8 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: isDev
-      ? "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;"
-      : "default-src 'self'; script-src 'self' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;",
+    value:
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-src https://link.receptyv.ca; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;",
   },
 ];
 
