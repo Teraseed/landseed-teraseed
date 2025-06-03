@@ -2,65 +2,87 @@
 
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { useState, useTransition } from "react";
+import { useState, useRef, useEffect } from "react";
+
+const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "zh", label: "简体中文" },
+  { code: "zh-TW", label: "繁體中文" },
+];
 
 export default function LanguageSwitch() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleLanguageSwitch = () => {
-    if (isPending || isAnimating) return;
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    }
+    if (open) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [open]);
 
-    setIsAnimating(true);
-    const newLocale = locale === "en" ? "zh" : "en";
-
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-    });
-
-    // Reset animation state after transition
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 300);
+  const handleSelect = (code: string) => {
+    setOpen(false);
+    if (code !== locale) {
+      router.replace(pathname, { locale: code });
+    }
   };
 
-  return (
-    <div className="relative flex items-center">
-      <button
-        onClick={handleLanguageSwitch}
-        disabled={isPending || isAnimating}
-        className={`relative w-22 h-8 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-opacity-50 disabled:opacity-70 ${
-          locale === "en" ? "focus:ring-green-600" : "focus:ring-orange-600"
-        }`}
-        style={{
-          backgroundColor: locale === "en" ? "#659265" : "#D16035",
-        }}
-        aria-label={`Switch to ${locale === "en" ? "Chinese" : "English"}`}
-      >
-        {/* Background sliding element */}
-        <div
-          className="absolute top-0.5 w-7 h-7 bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out"
-          style={{
-            transform: locale === "en" ? "translateX(2px)" : "translateX(58px)",
-          }}
-        />
+  const current = LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
 
-        {/* Show only the inactive language text */}
-        {locale === "en" ? (
-          // When English is active, show Chinese text on the right
-          <span className="absolute right-5 top-1/2 transform -translate-y-1/2 text-sm text-white transition-opacity duration-300">
-            中文
-          </span>
-        ) : (
-          // When Chinese is active, show English text on the left
-          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xs font-medium text-white transition-opacity duration-300">
-            English
-          </span>
-        )}
+  return (
+    <div className="relative flex flex-col items-center" ref={dropdownRef}>
+      <button
+        className={`w-34 h-12 bg-white rounded-lg shadow font-heading text-lg font-bold flex items-center justify-between px-4 border border-gray-50 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-primary`}
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="Select language"
+        type="button"
+      >
+        <span>{current.label}</span>
+        <svg
+          className={` w-6 h-6 transition-transform ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="5,7 15,7 10,13" />
+        </svg>
       </button>
+      {open && (
+        <div className="absolute top-14 left-0 w-36 bg-white rounded-sm shadow-lg z-[999] py-2 flex flex-col animate-fade-in">
+          {LANGUAGES.filter((l) => l.code !== locale).map((lang) => (
+            <button
+              key={lang.code}
+              className="w-full text-left px-4 py-2 hover:bg-gray-300 font-body text-lg text-gray-900"
+              onClick={() => handleSelect(lang.code)}
+              role="option"
+              aria-selected={lang.code === locale}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

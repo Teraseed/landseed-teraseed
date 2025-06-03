@@ -9,7 +9,7 @@ export default function Header() {
   const t = useTranslations("header");
 
   return (
-    <header className="relative z-20 px-4 py-4 mobile:py-5 tablet:py-6 flex justify-between items-center w-full mx-auto">
+    <header className="relative z-1000 px-4 py-4 mobile:py-5 tablet:py-6 flex justify-between items-center w-full mx-auto overflow-visible">
       <div className="flex justify-between items-center w-full max-w-[90%] tablet:max-w-[90%] desktop:max-w-6xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">

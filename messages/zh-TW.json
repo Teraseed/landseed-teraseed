@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "title": "TeraSeed",
+    "description": "TeraSeed by LandSeed"
+  },
+  "header": {
+    "home": "主頁",
+    "aboutUs": "關於我們",
+    "menu": {
+      "open": "打開選單",
+      "close": "關閉選單"
+    }
+  },
+  "hero": {
+    "title": "釋放後園的無限潛力",
+    "subtitle": "打造多功能小屋，展開全新生活方式。",
+    "cta": "立即登記，預約免費地產評估"
+  },
+  "benefits": {
+    "whyMatter": {
+      "subtitle": "你或許會問……",
+      "title": "為何後園小屋如此重要？",
+      "features": {
+        "housingCrisis": {
+          "title": "住屋危機",
+          "description": "安省現時短缺超過50,000個可負擔單位。後園小屋提供更多居住選擇，無需另起高樓。"
+        },
+        "familySupport": {
+          "title": "家庭支援",
+          "description": "年長父母或成年的子女可在家附近獨立居住，既方便又保留私人空間。"
+        },
+        "rentalIncome": {
+          "title": "租金收入",
+          "description": "出租後園小屋可帶來每月$1,500至$2,000的長期穩定收入。"
+        }
+      }
+    },
+    "whyNow": {
+      "title": "為何現在正是時機？",
+      "features": {
+        "risingCosts": {
+          "title": "成本飆升",
+          "description": "房價持續上升，不少家庭被市場拒之門外，後園單位成為更可負擔的出路。"
+        },
+        "legalChanges": {
+          "title": "法規放寬",
+          "description": "安省多個城市已明文容許建造後園小屋，無需再為分區用途爭拗。"
+        },
+        "smartGrowth": {
+          "title": "智慧增長",
+          "description": "這是一種本地化、可持續的發展方式，更有效利用現有土地資源。"
+        }
+      }
+    }
+  },
+  "meetLandseed": {
+    "subtitle": "認識LandSeed：您安心建屋的夥伴",
+    "whatIs": {
+      "title": "LandSeed是誰？",
+      "description": "LandSeed是一間非牟利機構，由一班以社區為本的發展顧問組成。我們致力連結業主、建築商、土地使用者及市政部門，協助屋主規劃及興建後園小屋。不論您是希望增加租金收入、接待親友，還是為摯愛家人打造獨立空間，我們都能為您量身打造合適方案。"
+    },
+    "whatMakesDifferent": {
+      "title": "我們有何獨特之處？",
+      "description": "LandSeed是一個具備實戰經驗的專業團隊，精通土地分區及法律條例。我們團隊成員來自多元文化背景，理解不同家庭的需求。我們秉持合作、耐心、以客為本的理念，從構思初期到落成交付，全程提供貼心又專業的服務體驗。"
+    }
+  },
+  "unlockPotential": {
+    "subtitle": "我們不只建屋。",
+    "title": "更協助您發掘家的無限可能。",
+    "description": "在LandSeed，我們幫助屋主將對後園的想像化為實用、宜居的現實空間。無論是法規、設計、申請許可還是施工流程，我們都會全程陪伴，讓您無壓完成每一步。",
+    "steps": {
+      "assess": "評估",
+      "select": "選擇",
+      "build": "建造"
+    }
+  },
+  "testimonials": {
+    "title": "真實故事，真實改變",
+    "yearsOld": "歲",
+    "susan": {
+      "name": "Susan",
+      "age": "33",
+      "quote": "我們為媽媽建了間小屋——她有了自己的空間，我們也更加安心了。",
+      "description": "照顧年邁母親的女兒"
+    },
+    "leo": {
+      "name": "Leo",
+      "age": "40",
+      "quote": "我的辦公室離廚房只有二十步，這是我為自己事業作出的最佳決定。",
+      "description": "在自家後園發展事業"
+    },
+    "maya": {
+      "name": "Maya",
+      "age": "58",
+      "quote": "我們現時每月靠出租小屋獲得$1,500的穩定收入。",
+      "description": "將後園變成穩定收入來源"
+    }
+  },
+  "pathSteps": {
+    "subtitle": "這只是三個真實故事——下一個，可能就是您。",
+    "title": "從夢想到入住，只需四步",
+    "steps": {
+      "feasibility": {
+        "number": "01",
+        "title": "可行性評估與地點規劃",
+        "description": "免費上門勘察、檢視法規與風險評估"
+      },
+      "design": {
+        "number": "02",
+        "title": "設計選擇與報價",
+        "description": "提供平面圖、裝修等級及工程時間預估"
+      },
+      "permits": {
+        "number": "03",
+        "title": "申請批文與融資支援",
+        "description": "協助申請補助、貸款方案及填寫所需表格"
+      },
+      "delivery": {
+        "number": "04",
+        "title": "運送安裝與交屋驗收",
+        "description": "安排運送、接駁水電、驗收交付與使用教學"
+      }
+    }
+  },
+  "imageCarousel": {
+    "subtitle": "展開想像",
+    "title": "一齊來看看它的真實模樣……"
+  },
+  "contactForm": {
+    "subtitle": "立即預約您的免費地產評估",
+    "title": "由今天起，實現您夢想中的後園小屋！"
+  },
+  "moreInformation": {
+    "subtitle": "深入了解您的後園小屋！",
+    "title": "更多資料",
+    "booklets": {
+      "booklet": "簡介手冊",
+      "technicalBooklet": "技術資料手冊"
+    }
+  },
+  "footer": {
+    "copyright": "版權 © {year} LandSeed",
+    "rightsReserved": "版權所有，不得轉載",
+    "contactUs": "聯絡我們"
+  }
+}
