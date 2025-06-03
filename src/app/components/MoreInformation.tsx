@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 type BookletData = {
   imageSrc: string;
@@ -11,11 +11,25 @@ type BookletData = {
 
 const MoreInformation: React.FC = () => {
   const t = useTranslations("moreInformation");
+  const locale = useLocale();
+
+  // Get appropriate booklet file based on locale
+  const getBookletHref = () => {
+    switch (locale) {
+      case "zh":
+        return "/downloads/marketing_booklet_zh.pdf";
+      case "zh-TW":
+        return "/downloads/marketing_booklet_zh_tw.pdf";
+      default:
+        return "/downloads/marketing_booklet_en.pdf";
+    }
+  };
+
   const booklets: BookletData[] = [
     {
       imageSrc: "/images/booklet.jpg",
       title: t("booklets.booklet"),
-      href: "/downloads/landseed-booklet.pdf",
+      href: getBookletHref(),
       alt: "Landseed Booklet - Unlock Your Backyard Potential",
     },
     {
