@@ -88,6 +88,7 @@ export default function BenefitsSection() {
                 height={213}
                 alt=""
                 aria-hidden="true"
+                style={{ height: "auto" }}
               />
             </div>
           </div>
@@ -158,6 +159,7 @@ export default function BenefitsSection() {
                 height={213}
                 alt=""
                 aria-hidden="true"
+                style={{ height: "auto" }}
               />
             </div>
           </div>
