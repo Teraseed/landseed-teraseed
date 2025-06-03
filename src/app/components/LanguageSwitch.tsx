@@ -5,9 +5,9 @@ import { useLocale } from "next-intl";
 import { useState, useRef, useEffect } from "react";
 
 const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "zh", label: "简体中文" },
-  { code: "zh-TW", label: "繁體中文" },
+  { code: "en", label: "English", shortLabel: "En" },
+  { code: "zh", label: "简体中文", shortLabel: "简中" },
+  { code: "zh-TW", label: "繁體中文", shortLabel: "繁中" },
 ];
 
 export default function LanguageSwitch() {
@@ -49,16 +49,30 @@ export default function LanguageSwitch() {
   return (
     <div className="relative flex flex-col items-center" ref={dropdownRef}>
       <button
-        className={`w-34 h-12 bg-white rounded-lg shadow font-heading text-lg font-bold flex items-center justify-between px-4 border border-gray-50 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-primary`}
+        className={`
+          w-20 h-10 sm:w-34 sm:h-12 
+          bg-white rounded-lg shadow-sm font-heading 
+          text-base sm:text-lg font-bold 
+          flex items-center justify-between 
+          px-2 sm:px-4 
+          border border-gray-300 hover:bg-gray-50 transition 
+          focus:outline-none focus:ring-2 focus:ring-primary
+          text-black
+        `}
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Select language"
         type="button"
       >
-        <span>{current.label}</span>
+        <span className="block sm:hidden flex-grow text-left pl-1">
+          {current.shortLabel}
+        </span>
+        <span className="hidden sm:block flex-grow text-left">
+          {current.label}
+        </span>
         <svg
-          className={` w-6 h-6 transition-transform ${
+          className={`w-6 h-6 sm:w-6 sm:h-6 transition-transform flex-shrink-0 ${
             open ? "rotate-180" : "rotate-0"
           }`}
           viewBox="0 0 20 20"
@@ -69,16 +83,17 @@ export default function LanguageSwitch() {
         </svg>
       </button>
       {open && (
-        <div className="absolute top-14 left-0 w-36 bg-white rounded-sm shadow-lg z-[999] py-2 flex flex-col animate-fade-in">
+        <div className="absolute top-12 sm:top-14 left-0 w-24 sm:w-36 bg-white rounded-lg shadow-lg border border-gray-200 z-[999] py-1 flex flex-col animate-fade-in">
           {LANGUAGES.filter((l) => l.code !== locale).map((lang) => (
             <button
               key={lang.code}
-              className="w-full text-left px-4 py-2 hover:bg-gray-300 font-body text-lg text-gray-900"
+              className="w-full text-left px-3 sm:px-4 py-2 hover:bg-gray-300 font-heading text-sm sm:text-lg text-black font-bold"
               onClick={() => handleSelect(lang.code)}
               role="option"
               aria-selected={lang.code === locale}
             >
-              {lang.label}
+              <span className="block sm:hidden">{lang.shortLabel}</span>
+              <span className="hidden sm:block">{lang.label}</span>
             </button>
           ))}
         </div>
