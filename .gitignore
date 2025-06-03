@@ -40,9 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large PDF files
-public/downloads/
-
 # images
 /public/images
 
