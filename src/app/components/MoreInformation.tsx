@@ -1,27 +1,32 @@
-import React from "react";
-import Link from "next/link";
+"use client";
+
+import React, { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useSession } from "next-auth/react";
+import AuthModal from "./AuthModal";
 
 type BookletData = {
   imageSrc: string;
   title: string;
-  href: string;
+  filename: string;
   alt: string;
 };
 
 const MoreInformation: React.FC = () => {
   const t = useTranslations("moreInformation");
   const locale = useLocale();
+  const { data: session } = useSession();
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Get appropriate booklet file based on locale
-  const getBookletHref = () => {
+  // Get appropriate booklet filename based on locale
+  const getBookletFilename = () => {
     switch (locale) {
       case "zh":
-        return "/downloads/marketing_booklet_zh.pdf";
+        return "marketing_booklet_zh.pdf";
       case "zh-TW":
-        return "/downloads/marketing_booklet_zh_tw.pdf";
+        return "marketing_booklet_zh_tw.pdf";
       default:
-        return "/downloads/marketing_booklet_en.pdf";
+        return "marketing_booklet_en.pdf";
     }
   };
 
@@ -29,13 +34,13 @@ const MoreInformation: React.FC = () => {
     {
       imageSrc: "/images/booklet.jpg",
       title: t("booklets.booklet"),
-      href: getBookletHref(),
+      filename: getBookletFilename(),
       alt: "Landseed Booklet - Unlock Your Backyard Potential",
     },
     {
       imageSrc: "/images/technical-booklet.svg",
       title: t("booklets.technicalBooklet"),
-      href: "/downloads/landseed-technical-booklet.pdf",
+      filename: "landseed-technical-booklet.pdf",
       alt: "Landseed Technical Booklet with specifications and details",
     },
   ];
@@ -57,26 +62,133 @@ const MoreInformation: React.FC = () => {
         {/* Booklets container */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 max-w-5xl mx-auto">
           {booklets.map((booklet, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Link
-                href={booklet.href}
-                className="block hover:opacity-95 transition-opacity focus:outline-none"
-              >
-                <div className="w-64 md:w-78 h-80 md:h-96 mb-4">
-                  <img
-                    src={booklet.imageSrc}
-                    alt={booklet.alt}
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
-                <p className="text-center text-lg text-gray-700 font-medium mt-4">
-                  {booklet.title}
-                </p>
-              </Link>
-            </div>
+            <BookletDownloadCard
+              key={index}
+              booklet={booklet}
+              session={session}
+              onAuthRequired={() => setShowAuthModal(true)}
+            />
           ))}
         </div>
+
+        {/* Auth Modal */}
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          onSuccess={() => {
+            // Modal will handle closing and refresh
+          }}
+        />
       </div>
+    </div>
+  );
+};
+
+// Separate component for booklet download card
+import { Session } from "next-auth";
+
+interface BookletDownloadCardProps {
+  booklet: BookletData;
+  session: Session | null;
+  onAuthRequired: () => void;
+}
+
+const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
+  booklet,
+  session,
+  onAuthRequired,
+}) => {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const locale = useLocale();
+
+  const getLoginText = () => {
+    if (locale === "zh") {
+      return "登录以下载";
+    } else if (locale === "zh-TW") {
+      return "登入以下載";
+    } else {
+      return "Login to Download";
+    }
+  };
+
+  const getDownloadingText = () => {
+    if (locale === "zh") {
+      return "下载中...";
+    } else if (locale === "zh-TW") {
+      return "下載中...";
+    } else {
+      return "Downloading...";
+    }
+  };
+
+  const handleDownload = async () => {
+    if (!session) {
+      onAuthRequired();
+      return;
+    }
+
+    setIsDownloading(true);
+    try {
+      const response = await fetch(`/api/download/${booklet.filename}`);
+
+      if (response.status === 401) {
+        onAuthRequired();
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error("Download failed");
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.style.display = "none";
+      a.href = url;
+      a.download = booklet.filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Download error:", error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center">
+      <button
+        onClick={handleDownload}
+        disabled={isDownloading}
+        className="block hover:opacity-95 transition-opacity focus:outline-none disabled:opacity-50 relative"
+      >
+        <div className="w-64 md:w-78 h-80 md:h-96 mb-4 relative">
+          <img
+            src={booklet.imageSrc}
+            alt={booklet.alt}
+            className="w-full h-full object-cover object-center"
+          />
+          {!session && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white px-4 py-2 rounded-md text-sm font-medium text-gray-800">
+                {getLoginText()}
+              </div>
+            </div>
+          )}
+          {isDownloading && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white px-4 py-2 rounded-md text-sm font-medium text-gray-800">
+                {getDownloadingText()}
+              </div>
+            </div>
+          )}
+        </div>
+        <p className="text-center text-lg text-gray-700 font-medium mt-4">
+          {booklet.title}
+        </p>
+      </button>
     </div>
   );
 };

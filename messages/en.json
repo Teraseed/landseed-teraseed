@@ -142,5 +142,17 @@
     "copyright": "Copyright © {year} LandSeed",
     "rightsReserved": "All rights reserved",
     "contactUs": "Contact us"
+  },
+  "auth": {
+    "signInTitle": "Sign in to your account",
+    "signInSubtitle": "Sign in to download all materials",
+    "email": "Email address",
+    "emailPlaceholder": "Email address",
+    "password": "Password",
+    "passwordPlaceholder": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in...",
+    "loginError": "Login failed. Please check your email and password.",
+    "backToHome": "Back to home"
   }
 }

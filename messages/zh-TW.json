@@ -142,5 +142,17 @@
     "copyright": "版權 © {year} LandSeed",
     "rightsReserved": "版權所有，不得轉載",
     "contactUs": "聯絡我們"
+  },
+  "auth": {
+    "signInTitle": "登入您的帳戶",
+    "signInSubtitle": "登入後即可下載所有資料",
+    "email": "郵箱地址",
+    "emailPlaceholder": "郵箱地址",
+    "password": "密碼",
+    "passwordPlaceholder": "密碼",
+    "signIn": "登入",
+    "signingIn": "登入中...",
+    "loginError": "登入失敗，請檢查您的郵箱和密碼",
+    "backToHome": "返回首頁"
   }
 }

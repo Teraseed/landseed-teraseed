@@ -142,5 +142,17 @@
     "copyright": "版权 © {year} LandSeed",
     "rightsReserved": "保留所有权利",
     "contactUs": "联系我们"
+  },
+  "auth": {
+    "signInTitle": "登录您的账户",
+    "signInSubtitle": "登录后即可下载所有资料",
+    "email": "邮箱地址",
+    "emailPlaceholder": "邮箱地址",
+    "password": "密码",
+    "passwordPlaceholder": "密码",
+    "signIn": "登录",
+    "signingIn": "登录中...",
+    "loginError": "登录失败，请检查您的邮箱和密码",
+    "backToHome": "返回首页"
   }
 }

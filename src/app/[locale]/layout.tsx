@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Providers } from "@/app/providers";
 
 // Noto Sans SC (思源黑体) for headings
 const notoSansSC = Noto_Sans_SC({
@@ -74,10 +75,12 @@ export default async function RootLayout({
       <body
         className={`${suezOne.variable} ${nunitoSans.variable} ${notoSansSC.variable} ${notoSerifSC.variable} bg-page min-h-screen w-full overflow-x-hidden`}
       >
-        <NextIntlClientProvider>
-          <main className="w-full overflow-x-hidden">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <Providers>
+          <NextIntlClientProvider>
+            <main className="w-full overflow-x-hidden">{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );
