@@ -58,7 +58,7 @@ const MoreInformation: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-20">
+    <div id="more-information" className="w-full py-20">
       <div className="mx-auto">
         {/* Heading section */}
         <div className="absolute mb-1 w-[709px] h-[162px] bg-orange-moreinfo opacity-60 z-0"></div>

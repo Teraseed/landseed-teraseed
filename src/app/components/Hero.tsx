@@ -60,33 +60,65 @@ export default function Hero() {
           <p className="font-body text-[18px] tablet:text-[20px] desktop:text-[24px] leading-[1.32] font-[300] tracking-[0.96px] text-gray-200 mb-6 tablet:mb-8">
             {t("subtitle")}
           </p>
-          {/* CTA Button */}
-          <div className="max-w-full tablet:max-w-[300px] desktop:max-w-[350px]">
-            <Link
-              href="#contact-form"
-              className="inline-flex items-center px-4 tablet:px-5 desktop:px-6 py-2 tablet:py-3 text-white-text transition-all group 
-               bg-[linear-gradient(102deg,#647B64_-4.62%,#66AC66_178.22%)] 
-               shadow-[0px_20px_40px_rgba(128,143,150,0.19)] 
-               rounded-[5px] hover:opacity-90"
-            >
-              <span className="uppercase font-medium font-body text-[12px] tablet:text-[14px] desktop:text-[16px] leading-[150%] tracking-[1.5px] tablet:tracking-[2px] desktop:tracking-[2.48px]">
-                {t("cta")}
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 tablet:h-5 tablet:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          {/* CTA Buttons */}
+          <div className="flex flex-col tablet:flex-row gap-4 tablet:gap-6 max-w-full">
+            {/* Primary CTA Button */}
+            <div className="max-w-full tablet:max-w-[300px] desktop:max-w-[350px]">
+              <Link
+                href="#contact-form"
+                className="inline-flex items-center px-4 tablet:px-5 desktop:px-6 py-2 tablet:py-3 text-white-text transition-all group 
+                 bg-[linear-gradient(102deg,#647B64_-4.62%,#66AC66_178.22%)] 
+                 shadow-[0px_20px_40px_rgba(128,143,150,0.19)] 
+                 rounded-[5px] hover:opacity-90"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </Link>
+                <span className="uppercase font-medium font-body text-[12px] tablet:text-[14px] desktop:text-[16px] leading-[150%] tracking-[1.5px] tablet:tracking-[2px] desktop:tracking-[2.48px]">
+                  {t("cta")}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 tablet:h-5 tablet:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Learn More Button */}
+            <div className="max-w-full tablet:max-w-[250px] desktop:max-w-[300px]">
+              <Link
+                href="#more-information"
+                className="inline-flex items-center px-4 tablet:px-5 desktop:px-6 py-2 tablet:py-3 text-white-text transition-all group 
+                  bg-secondary-light bg-opacity-20 border-2 border-white-text backdrop-blur-sm
+                  shadow-[0px_8px_24px_rgba(100,172,102,0.25)]
+                  rounded-[5px] hover:bg-white hover:text-gray-800 hover:border-white"
+              >
+                <span className="uppercase font-medium font-body text-[12px] tablet:text-[14px] desktop:text-[16px] leading-[150%] tracking-[1.5px] tablet:tracking-[2px] desktop:tracking-[2.48px]">
+                  {t("learnMoreBooklet")}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 tablet:h-5 tablet:w-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
