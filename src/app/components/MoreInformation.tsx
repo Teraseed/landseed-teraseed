@@ -30,6 +30,18 @@ const MoreInformation: React.FC = () => {
     }
   };
 
+  // Get appropriate technical booklet filename based on locale
+  const getTechnicalBookletFilename = () => {
+    switch (locale) {
+      case "zh":
+        return "Revised technical booklet concept_simplified-chinese.pdf";
+      case "zh-TW":
+        return "Revised technical booklet concept_traditional-chinese.pdf";
+      default:
+        return "Revised technical booklet English.pdf";
+    }
+  };
+
   const booklets: BookletData[] = [
     {
       imageSrc: "/images/booklet.jpg",
@@ -40,7 +52,7 @@ const MoreInformation: React.FC = () => {
     {
       imageSrc: "/images/technical-booklet.svg",
       title: t("booklets.technicalBooklet"),
-      filename: "landseed-technical-booklet.pdf",
+      filename: getTechnicalBookletFilename(),
       alt: "Landseed Technical Booklet with specifications and details",
     },
   ];

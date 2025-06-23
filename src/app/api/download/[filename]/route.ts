@@ -26,7 +26,9 @@ export async function GET(
       "marketing_booklet_en.pdf",
       "marketing_booklet_zh.pdf",
       "marketing_booklet_zh_tw.pdf",
-      "landseed-technical-booklet.pdf",
+      "Revised technical booklet English.pdf",
+      "Revised technical booklet concept_simplified-chinese.pdf",
+      "Revised technical booklet concept_traditional-chinese.pdf",
     ];
 
     if (!allowedFiles.includes(filename)) {
