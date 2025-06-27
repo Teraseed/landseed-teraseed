@@ -25,7 +25,7 @@ const securityHeaders = [
   {
     key: "Content-Security-Policy",
     value:
-      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca https://link.msgsndr.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://backend.leadconnectorhq.com; frame-src https://link.receptyv.ca https://link.msgsndr.com 'self'; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;",
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.receptyv.ca https://link.msgsndr.com https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://www.youtube.com; img-src 'self' data: blob: https://www.youtube.com https://i.ytimg.com; font-src 'self'; connect-src 'self' https://backend.leadconnectorhq.com https://www.youtube.com; frame-src https://link.receptyv.ca https://link.msgsndr.com https://www.youtube.com 'self'; frame-ancestors 'self' https://teraseed.landseed.ca https://landseed.ca;",
   },
 ];
 

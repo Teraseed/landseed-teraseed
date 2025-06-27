@@ -95,7 +95,26 @@ const ImageCarousel: React.FC = () => {
             {t("title")}
           </h2>
         </div>
-
+        <div className="w-full h-full flex flex-col gap-4 pb-8">
+          <iframe
+            width="100%"
+            height="100%"
+            className="aspect-video"
+            src="https://www.youtube.com/embed/_buBn6ZEKvU?rel=0&modestbranding=1"
+            title="YouTube video player"
+            allow=" encrypted-media; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            width="100%"
+            height="100%"
+            className="aspect-video"
+            src="https://www.youtube.com/embed/-n-Jf_B0O70?rel=0&modestbranding=1"
+            title="YouTube Shorts video player"
+            allow=" encrypted-media; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         {/* Carousel container */}
         <div className="relative">
           {/* Images container with carousel effect */}
