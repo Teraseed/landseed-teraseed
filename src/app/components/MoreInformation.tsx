@@ -117,21 +117,20 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
 
   const getLoginText = () => {
     if (locale === "zh") {
-      return "登录以下载";
+      return "登录以查看";
     } else if (locale === "zh-TW") {
-      return "登入以下載";
+      return "登入以查看";
     } else {
-      return "Login to Download";
+      return "Login to Access";
     }
   };
-
   const getDownloadingText = () => {
     if (locale === "zh") {
-      return "下载中...";
+      return "载入中...";
     } else if (locale === "zh-TW") {
-      return "下載中...";
+      return "載入中...";
     } else {
-      return "Downloading...";
+      return "Loading...";
     }
   };
 
