@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useSession } from "next-auth/react";
 import AuthModal from "./AuthModal";
+import { useRouter } from "next/navigation";
 
 type BookletData = {
   imageSrc: string;
@@ -18,13 +19,13 @@ const MoreInformation: React.FC = () => {
   const { data: session } = useSession();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Get appropriate booklet filename based on locale
+  // Get appropriate technicalBooklet filename based on locale
   const getBookletFilename = () => {
     switch (locale) {
       case "zh":
         return "marketing_booklet_zh.pdf";
       case "zh-TW":
-        return "marketing_booklet_zh_tw.pdf";
+        return "marketing_booklet_zh-TW.pdf";
       default:
         return "marketing_booklet_en.pdf";
     }
@@ -34,11 +35,11 @@ const MoreInformation: React.FC = () => {
   const getTechnicalBookletFilename = () => {
     switch (locale) {
       case "zh":
-        return "Revised technical booklet concept_simplified-chinese.pdf";
+        return "technical_booklet_zh.pdf";
       case "zh-TW":
-        return "Revised technical booklet concept_traditional-chinese.pdf";
+        return "technical_booklet_zh-TW.pdf";
       default:
-        return "Revised technical booklet English.pdf";
+        return "technical_booklet_en.pdf";
     }
   };
 
@@ -112,6 +113,7 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
 }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const locale = useLocale();
+  const router = useRouter();
 
   const getLoginText = () => {
     if (locale === "zh") {
@@ -133,7 +135,8 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
     }
   };
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
+
     if (!session) {
       onAuthRequired();
       return;
@@ -141,27 +144,10 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
 
     setIsDownloading(true);
     try {
-      const response = await fetch(`/api/download/${booklet.filename}`);
-
-      if (response.status === 401) {
-        onAuthRequired();
-        return;
-      }
-
-      if (!response.ok) {
-        throw new Error("Download failed");
-      }
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.style.display = "none";
-      a.href = url;
-      a.download = booklet.filename;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
+      if(booklet.imageSrc == "/images/booklet.jpg")
+        router.push('/marketingBooklet');
+      else if(booklet.imageSrc == "/images/technical-booklet.svg")
+        router.push('/technicalBooklet');
     } catch (error) {
       console.error("Download error:", error);
     } finally {
