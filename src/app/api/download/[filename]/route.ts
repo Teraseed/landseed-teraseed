@@ -25,10 +25,10 @@ export async function GET(
     const allowedFiles = [
       "marketing_booklet_en.pdf",
       "marketing_booklet_zh.pdf",
-      "marketing_booklet_zh_tw.pdf",
-      "Revised technical booklet English.pdf",
-      "Revised technical booklet concept_simplified-chinese.pdf",
-      "Revised technical booklet concept_traditional-chinese.pdf",
+      "marketing_booklet_zh-TW.pdf",
+      "technical_booklet_en.pdf",
+      "technical_booklet_zh.pdf",
+      "technical_booklet_zh-TW.pdf",
     ];
 
     if (!allowedFiles.includes(filename)) {
