@@ -6,7 +6,7 @@ export default function MarketingBooklet() {
     const params = useParams();
 
     return (
-        <iframe src={`/downloads/marketing_booklet_${params.locale}.pdf#toolbar=0`} frameBorder="0" width="100%" height={1500}></iframe>
+        <embed src={`/downloads/marketing_booklet_${params.locale}.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0`} width="100%" height={1500}></embed>
 
     )
 
