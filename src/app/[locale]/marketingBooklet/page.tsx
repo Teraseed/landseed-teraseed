@@ -7,7 +7,7 @@ export default function MarketingBooklet() {
 
     return (
         <div className="pointer-events-none">
-            <iframe className="pointer-events-none" src={`/downloads/marketing_booklet_${params.locale}.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0`} width="100%" height={6500}></iframe>
+            <iframe className="pointer-events-none" src={`/downloads/marketing_booklet_${params.locale}.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0`} width="100%" height={9000}></iframe>
         </div>
 
     )
