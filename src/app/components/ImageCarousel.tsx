@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 const ImageCarousel: React.FC = () => {
   const t = useTranslations("imageCarousel");
+  const video = useTranslations("video");
   const images = [
     {
       src: "/images/living.png",
@@ -96,24 +97,36 @@ const ImageCarousel: React.FC = () => {
           </h2>
         </div>
         <div className="w-full h-full flex flex-col gap-4 pb-8">
+          <div className="grid grid-cols-3 gap-8 items-center">
           <iframe
             width="100%"
             height="100%"
-            className="aspect-video"
-            src="https://www.youtube.com/embed/_buBn6ZEKvU?rel=0&modestbranding=1"
+            className="aspect-video col-span-2"
+            src={video("video1.src")}
             title="YouTube video player"
             allow=" encrypted-media; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
+          <div className="flex flex-col col-span-1">
+          <p className="font-heading text-xl text-gray-100 mb-3">{video("video1.title")}</p>
+          <p className="font-body text-gray-200 text-[16px] font-[300] width=[260px] tracking-wide leading-relaxed">{video("video1.description")}</p>
+          </div>
+          </div>
+          <div className="grid grid-cols-3 gap-8 items-center">
+          <div className="flex flex-col col-span-1">
+          <p className="font-heading text-xl text-gray-100 mb-3">{video("video2.title")}</p>
+          <p className="font-body text-gray-200 text-[16px] font-[300] width=[260px] tracking-wide leading-relaxed">{video("video2.description")}</p>
+          </div>
           <iframe
             width="100%"
             height="100%"
-            className="aspect-video"
-            src="https://www.youtube.com/embed/-n-Jf_B0O70?rel=0&modestbranding=1"
-            title="YouTube Shorts video player"
+            className="aspect-video col-span-2"
+            src={video("video2.src")}
+            title="YouTube video player"
             allow=" encrypted-media; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
+          </div>
         </div>
         {/* Carousel container */}
         <div className="relative">

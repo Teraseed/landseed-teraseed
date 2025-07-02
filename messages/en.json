@@ -136,7 +136,21 @@
     "title": "MORE INFORMATION",
     "booklets": {
       "booklet": "Information Booklet",
-      "technicalBooklet": "Technical Booklet"
+      "bookletDescription": "Learn about the basics information of backyard suites.",
+      "technicalBooklet": "Technical Booklet",
+      "technicalBookletDescription": "Detailed technical specifications, construction standards, and professional guidance. Please contact us to get the technical booklet."
+    }
+  },
+  "video": {
+    "video1": {
+    "src": "https://www.youtube.com/embed/_buBn6ZEKvU?modestbranding=1&rel=0",
+      "title": "Unlock the potential with thoughtful design",
+      "description": "Built and insulated to handle the temperatures of both Canadian Winters, and US Summers. We have customization options for interior features, exterior features, and auxiliary features."
+    },
+    "video2": {
+      "src": "https://www.youtube.com/embed/-n-Jf_B0O70?modestbranding=1&rel=0",
+      "title": "Inspired by traditional Chinese architecture",
+      "description": "Visit a Model Suite, see what it's like to walk through your own backyard home."
     }
   },
   "footer": {
@@ -156,4 +170,5 @@
     "loginError": "Login failed. Please check your email and password.",
     "backToHome": "Back to home"
   }
+
 }

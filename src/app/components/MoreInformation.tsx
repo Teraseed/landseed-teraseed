@@ -10,7 +10,9 @@ type BookletData = {
   imageSrc: string;
   title: string;
   filename: string;
+  description: string;
   alt: string;
+  authRequired?: boolean; // New optional property
 };
 
 const MoreInformation: React.FC = () => {
@@ -47,14 +49,19 @@ const MoreInformation: React.FC = () => {
     {
       imageSrc: "/images/booklet.jpg",
       title: t("booklets.booklet"),
+      description: t("booklets.bookletDescription"),
       filename: getBookletFilename(),
       alt: "Landseed Booklet - Unlock Your Backyard Potential",
+      authRequired: false, // Set to false for the first booklet
+
     },
     {
       imageSrc: "/images/technical-booklet.svg",
       title: t("booklets.technicalBooklet"),
+      description: t("booklets.technicalBookletDescription"),
       filename: getTechnicalBookletFilename(),
       alt: "Landseed Technical Booklet with specifications and details",
+      authRequired: true, 
     },
   ];
 
@@ -136,10 +143,11 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
 
   const handleDownload = () => {
 
-    if (!session) {
-      onAuthRequired();
-      return;
-    }
+  // Check if authentication is required AND if there's no session
+  if (booklet.authRequired && !session) {
+    onAuthRequired(); // Trigger the auth modal
+    return; // Stop here, don't proceed with download
+  }
 
     setIsDownloading(true);
     try {
@@ -159,7 +167,7 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
       <button
         onClick={handleDownload}
         disabled={isDownloading}
-        className="block hover:opacity-95 transition-opacity focus:outline-none disabled:opacity-50 relative"
+        className="block hover:opacity-95 transition-opacity focus:outline-none disabled:opacity-50 relative flex flex-col items-center px-4"
       >
         <div className="w-64 md:w-78 h-80 md:h-96 mb-4 relative">
           <img
@@ -167,7 +175,7 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
             alt={booklet.alt}
             className="w-full h-full object-cover object-center"
           />
-          {!session && (
+          {!session && booklet.authRequired && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="bg-white px-4 py-2 rounded-md text-sm font-medium text-gray-800">
                 {getLoginText()}
@@ -182,9 +190,12 @@ const BookletDownloadCard: React.FC<BookletDownloadCardProps> = ({
             </div>
           )}
         </div>
-        <p className="text-center text-lg text-gray-700 font-medium mt-4">
+        <div className="flex flex-col items-center mt-4">
+        <p className="text-center text-lg text-gray-700 font-medium">
           {booklet.title}
         </p>
+        <p className="text-center text-sm text-gray-500 font-medium w-full desktop:w-[320px]">{booklet.description}</p>
+        </div>
       </button>
     </div>
   );
