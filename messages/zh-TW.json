@@ -136,7 +136,21 @@
     "title": "更多資料",
     "booklets": {
       "booklet": "資訊簡介手冊",
-      "technicalBooklet": "技術資料手冊"
+      "bookletDescription": "了解後園小屋的基本資訊。",
+      "technicalBooklet": "技術資料手冊",
+      "technicalBookletDescription": "詳細的技術規格、施工標準和專業指導。請聯絡我們以獲取技術資料手冊。"
+    }
+  },
+  "video": {
+    "video1": {
+    "src": "https://www.youtube.com/embed/jPHfwaKlYbQ?si=ZQUFKsSkqnd0T_VL&rel=0",
+      "title": "挖掘家的無限可能",
+      "description": "專設計用於承受加拿大冬天及美國的夏天。我們亦部分客制化予客戶選擇室內裝潢，室外裝潢及輔助功能。"
+    },
+    "video2": {
+      "src": "https://www.youtube.com/embed/djX-pf4IZLY?si=M-vo6LXrTLypJ9g7&rel=0",
+      "title": "靈感來自中國傳統建築",
+      "description": "參觀示範小屋——親身體驗後院住宅的真實空間與氛圍。"
     }
   },
   "footer": {

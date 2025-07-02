@@ -52,7 +52,7 @@ export default function Hero() {
       <Header />
 
       {/* Hero Content (top layer) */}
-      <div className="relative z-20 px-4 pt-[8rem] tablet:pt-[12rem] desktop:pt-[16rem] pb-[4rem] tablet:pb-[6rem] desktop:pb-[8rem] max-w-[90%] tablet:max-w-[85%] desktop:max-w-[1000px] mx-auto">
+      <div className="relative z-20 px-4 pt-[8rem] tablet:pt-[8rem] desktop:pt-[8rem] pb-[4rem] tablet:pb-[6rem] desktop:pb-[8rem] max-w-[90%] tablet:max-w-[85%] desktop:max-w-[1000px] mx-auto">
         <div className="max-w-full tablet:max-w-[80%] desktop:max-w-[1000px]">
           <h1 className="font-heading text-gray-100 mb-4 text-[32px] tablet:text-[40px] desktop:text-[48px] leading-[1.16] font-[400]">
             {t("title")}

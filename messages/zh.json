@@ -136,7 +136,21 @@
     "title": "更多信息",
     "booklets": {
       "booklet": "信息宣传手册",
-      "technicalBooklet": "技术资料手册"
+      "bookletDescription": "了解后院小屋的基本信息。",
+      "technicalBooklet": "技术资料手册",
+      "technicalBookletDescription": "详细的技术规格、施工标准和专业指导。请联系我们获取技术资料手册。"
+    }
+  },
+  "video": {
+    "video1": {
+      "src": "https://www.youtube.com/embed/jPHfwaKlYbQ?si=ZQUFKsSkqnd0T_VL&rel=0",
+      "title": "挖掘家的无限可能",
+      "description": "专设计用于承受加拿大冬天及美国的夏天。我们亦部分客制化予客户选择室内装潢，室外装潢及辅助功能。"
+    },
+    "video2": {
+      "src": "https://www.youtube.com/embed/djX-pf4IZLY?si=M-vo6LXrTLypJ9g7&rel=0",
+      "title": "灵感来自中国传统建筑",
+      "description": "参观样板小屋——亲自体验后院住宅的真实空间与氛围。"
     }
   },
   "footer": {

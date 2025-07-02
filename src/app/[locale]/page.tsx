@@ -54,12 +54,12 @@ export default async function Home() {
   return (
     <div className="w-full overflow-x-hidden">
       <Hero />
+      <ImageCarousel />
       <BenefitsSection />
       <MeetLandseedSection />
       <UnlockPotentialSection />
       <Testimonials />
       <PathSteps />
-      <ImageCarousel />
       <ContactForm />
       <MoreInformation />
     </div>
