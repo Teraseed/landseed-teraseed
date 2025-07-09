@@ -97,30 +97,30 @@ const ImageCarousel: React.FC = () => {
           </h2>
         </div>
         <div className="w-full h-full flex flex-col gap-4 pb-8">
-          <div className="grid grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 tablet:grid-cols-3 gap-8 items-center">
           <iframe
             width="100%"
             height="100%"
-            className="aspect-video col-span-2"
+            className="aspect-video col-span-1 tablet:col-span-2"
             src={video("video1.src")}
             title="YouTube video player"
             allow=" encrypted-media; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <div className="flex flex-col col-span-1">
+          <div className="flex flex-col col-span-1 tablet:col-span-1">
           <p className="font-heading text-xl text-gray-100 mb-3">{video("video1.title")}</p>
           <p className="font-body text-gray-200 text-[16px] font-[300] width=[260px] tracking-wide leading-relaxed">{video("video1.description")}</p>
           </div>
           </div>
-          <div className="grid grid-cols-3 gap-8 items-center">
-          <div className="flex flex-col col-span-1">
+          <div className="grid grid-cols-1 tablet:grid-cols-3 gap-8 items-center">
+          <div className="flex flex-col col-span-1 tablet:col-span-1 order-2 tablet:order-1">
           <p className="font-heading text-xl text-gray-100 mb-3">{video("video2.title")}</p>
           <p className="font-body text-gray-200 text-[16px] font-[300] width=[260px] tracking-wide leading-relaxed">{video("video2.description")}</p>
           </div>
           <iframe
             width="100%"
             height="100%"
-            className="aspect-video col-span-2"
+            className="aspect-video col-span-1 tablet:col-span-2 order-1 tablet:order-2"
             src={video("video2.src")}
             title="YouTube video player"
             allow=" encrypted-media; picture-in-picture; web-share"
