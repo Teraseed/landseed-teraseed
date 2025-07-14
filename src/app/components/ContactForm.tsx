@@ -1,151 +1,73 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import Script from "next/script";
-import { useTranslations, useLocale } from "next-intl";
+import { FC } from 'react';
+import { useForm } from 'react-hook-form';
+import { sendEmail } from "../../../scripts/send-email";
 
-const ContactForm: React.FC = () => {
-  const t = useTranslations("contactForm");
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const locale = useLocale();
-
-  return (
-    <div id="contact-form" className="w-full py-12">
-      {locale === "zh" ? (
-        <>
-          <Script
-            src="https://link.msgsndr.com/js/form_embed.js"
-            strategy="lazyOnload"
-          />
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="mb-8 text-center">
-              <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
-                {t("subtitle")}
-              </h3>
-              <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
-                {t("title")}
-              </h2>
-            </div>
-            <div className="max-w-3xl mx-auto">
-              <div className="h-[571px]">
-                <iframe
-                  ref={iframeRef}
-                  src="https://link.receptyv.ca/widget/form/IzxjEHeVDEEnpHOiOVMG"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    border: "none",
-                    borderRadius: "10px",
-                  }}
-                  id="inline-IzxjEHeVDEEnpHOiOVMG"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="LandSeedTinyHome Project Form Registration - Chinese"
-                  data-height="571"
-                  data-layout-iframe-id="inline-IzxjEHeVDEEnpHOiOVMG"
-                  data-form-id="IzxjEHeVDEEnpHOiOVMG"
-                  title="LandSeedTinyHome Project Form Registration - Chinese"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : locale === "zh-TW" ? (
-        <>
-          <Script
-            src="https://link.receptyv.ca/js/form_embed.js"
-            strategy="lazyOnload"
-          />
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="mb-8 text-center">
-              <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
-                {t("subtitle")}
-              </h3>
-              <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
-                {t("title")}
-              </h2>
-            </div>
-            <div className="max-w-3xl mx-auto">
-              <div className="h-[494px]">
-                <iframe
-                  ref={iframeRef}
-                  src="https://link.receptyv.ca/widget/form/sLxboVu4J36vbFgQ18JA"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    border: "none",
-                    borderRadius: "10px",
-                  }}
-                  id="inline-sLxboVu4J36vbFgQ18JA"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="LandSeedTinyHome Project Form Registration - Traditional Chinese"
-                  data-height="494"
-                  data-layout-iframe-id="inline-sLxboVu4J36vbFgQ18JA"
-                  data-form-id="sLxboVu4J36vbFgQ18JA"
-                  title="LandSeedTinyHome Project Form Registration - Traditional Chinese"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <Script
-            src="https://link.receptyv.ca/js/form_embed.js"
-            strategy="lazyOnload"
-          />
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="mb-8 text-center">
-              <h3 className="font-heading text-base tablet:text-lg desktop:text-xl text-secondary-light uppercase tracking-wide">
-                {t("subtitle")}
-              </h3>
-              <h2 className="font-heading text-2xl tablet:text-3xl desktop:text-4xl text-[#566e5a] font-medium">
-                {t("title")}
-              </h2>
-            </div>
-            <div className="max-w-3xl mx-auto">
-              <div className="h-[510px]">
-                <iframe
-                  ref={iframeRef}
-                  src="https://link.receptyv.ca/widget/form/YxldwbvqWgvgeTK0WUKE"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    border: "none",
-                    borderRadius: "4px",
-                  }}
-                  id="inline-YxldwbvqWgvgeTK0WUKE"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="TinyHome Project Form Registration"
-                  data-height="510"
-                  data-layout-iframe-id="inline-YxldwbvqWgvgeTK0WUKE"
-                  data-form-id="YxldwbvqWgvgeTK0WUKE"
-                  title="TinyHome Project Form Registration"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+export type FormData = {
+    name: string;
+    email: string;
+    message: string;
 };
 
-export default ContactForm;
+const Contact: FC = () => {
+    const { register, handleSubmit } = useForm<FormData>();
+
+    function onSubmit(data: FormData) {
+        sendEmail(data);
+    }
+
+    return (
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='mb-5'>
+                <label
+                    htmlFor='name'
+                    className='mb-3 block text-base font-medium text-black'
+                >
+                    Full Name
+                </label>
+                <input
+                    type='text'
+                    placeholder='Full Name'
+                    className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+                    {...register('name', { required: true })}
+                />
+            </div>
+            <div className='mb-5'>
+                <label
+                    htmlFor='email'
+                    className='mb-3 block text-base font-medium text-black'
+                >
+                    Email Address
+                </label>
+                <input
+                    type='email'
+                    placeholder='example@domain.com'
+                    className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+                    {...register('email', { required: true })}
+                />
+            </div>
+            <div className='mb-5'>
+                <label
+                    htmlFor='message'
+                    className='mb-3 block text-base font-medium text-black'
+                >
+                    Message
+                </label>
+                <textarea
+                    rows={4}
+                    placeholder='Type your message'
+                    className='w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+                    {...register('message', { required: true })}
+                ></textarea>
+            </div>
+            <div>
+                <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+                    Submit
+                </button>
+            </div>
+        </form>
+    );
+};
+
+export default Contact;
